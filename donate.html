@@ -78,7 +78,7 @@
       <div>
         <div class="flex items-center justify-between pb-6 border-b border-slate-100">
           <span class="font-heading font-bold text-brand-navy">Sinethemba Hope</span>
-          <button type="button" class="p-2 text-slate-400" onclick="document.getElementById('mobileMenuDrawer').classList.add('translate-x-full')">âœ•</button>
+          <button type="button" class="p-2 text-slate-400 text-xl font-bold" onclick="document.getElementById('mobileMenuDrawer').classList.add('translate-x-full')">&times;</button>
         </div>
         <nav class="mt-6 flex flex-col gap-4">
           <a href="about_us.html" class="mobile-nav-link text-base font-semibold text-slate-700 py-2">About Us</a>
@@ -172,7 +172,10 @@
         <!-- Banking Accordion -->
         <div class="mt-6">
           <button type="button" id="eftToggleBtn" class="w-full py-3 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs sm:text-sm font-semibold flex items-center justify-between transition-colors">
-            <span>ðŸ›ï¸ Official FNB Bank Transfer (EFT) Details</span>
+            <span class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"></path></svg>
+              Official FNB Bank Transfer (EFT) Details
+            </span>
             <svg class="toggle-icon w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </button>
           <div id="eftDetailsBox" class="hidden mt-3 p-5 rounded-2xl bg-slate-900 text-white border border-slate-700 text-xs sm:text-sm space-y-2">
@@ -184,7 +187,7 @@
             <p><strong>Bank:</strong> First National Bank (FNB)</p>
             <p><strong>Account Number:</strong> 62233690404</p>
             <p><strong>Branch Code:</strong> 250655</p>
-            <p id="copyFeedback" class="text-xs text-emerald-400 font-semibold opacity-0 transition-opacity">âœ“ Copied to clipboard!</p>
+            <p id="copyFeedback" class="text-xs text-emerald-400 font-semibold opacity-0 transition-opacity">&check; Copied to clipboard!</p>
           </div>
         </div>
 
@@ -222,7 +225,7 @@
             Request Section 18A Certificate
           </button>
           <div id="taxReceiptSuccessAlert" class="hidden p-3 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-800 font-semibold text-center">
-            âœ“ Request submitted! Our finance office will email your verified Section 18A certificate.
+            &check; Request submitted! Our finance office will email your verified Section 18A certificate.
           </div>
         </form>
       </div>
