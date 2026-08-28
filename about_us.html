@@ -1,194 +1,308 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ABOUT US | Sinethemba Hope Organization</title>
-  <meta name="description" content="Learn about Sinethemba Hope Organization, our founder Pastor Ndumiso Ngema, history, vision, mission and HOPE community projects." />
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="stylesheet" href="assets/css/responsive.css" />
+  <title>About Us | Sinethemba Hope Organisation</title>
+  <meta name="description" content="Learn about Sinethemba Hope Organisation, founded by Pastor Ndumiso Ngema, our history, vision, mission, and the HOPE community framework." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#0A2540',
+              'navy-dark': '#061727',
+              'navy-light': '#0F3459',
+              gold: '#F59E0B',
+              'gold-hover': '#D97706',
+              'gold-light': '#FEF3C7',
+              sky: '#E0F2FE',
+              'sky-dark': '#0284C7',
+              emerald: '#059669',
+              'emerald-light': '#D1FAE5'
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+            script: ['Dancing Script', 'cursive']
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body>
-  <div class="bg-overlay"></div>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased pb-20 md:pb-0">
 
-  <!-- SITE HEADER -->
-  <header class="site-header">
-    <div class="container">
-      <div class="header-top">
-        <a href="index.html" class="header-brand" aria-label="Sinethemba Hope Organization Home">
-          <img src="assets/images/logo.jpg" alt="Sinethemba Hope Organization Logo" class="header-logo" />
-          <div class="header-titles">
-            <h1>SINETHEMBA HOPE ORGANIZATION</h1>
-            <p class="header-tagline">Instiling positive attitude, hope and determination</p>
+  <!-- TOP NAVIGATION -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-3.5 group">
+          <img src="assets/images/logo.jpg" alt="Logo" class="h-12 w-12 rounded-xl object-cover shadow-sm group-hover:scale-105 transition-transform" />
+          <div class="flex flex-col">
+            <span class="font-heading font-extrabold text-lg sm:text-xl text-brand-navy tracking-tight leading-none group-hover:text-brand-gold transition-colors">
+              SINETHEMBA HOPE
+            </span>
+            <span class="text-xs text-slate-500 font-medium tracking-wide uppercase mt-1">
+              Organisation &bull; NPO
+            </span>
           </div>
         </a>
-        <div>
-          <a href="http://www.cfci.org.za/" target="_blank" rel="noopener noreferrer" class="header-action-btn">
-            KNOW MORE ABOUT CFCI
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="about_us.html" class="text-sm font-bold text-brand-gold">About Us</a>
+          <a href="index.html#programs" class="text-sm font-semibold text-slate-600 hover:text-brand-navy transition-colors">Our Programs</a>
+          <a href="index.html#impact" class="text-sm font-semibold text-slate-600 hover:text-brand-navy transition-colors">Impact</a>
+          <a href="index.html#governance" class="text-sm font-semibold text-slate-600 hover:text-brand-navy transition-colors">Section 18A / Governance</a>
+          <a href="contact.html" class="text-sm font-semibold text-slate-600 hover:text-brand-navy transition-colors">Contact</a>
+        </nav>
+        <div class="hidden sm:flex items-center gap-4">
+          <a href="donate.html" class="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full text-sm font-bold text-white bg-brand-gold hover:bg-brand-gold-hover shadow-md hover:shadow-lg transition-all">
+            Donate Now
+          </a>
+        </div>
+        <button id="mobileMenuBtn" type="button" class="md:hidden p-2.5 rounded-xl text-slate-600 hover:text-brand-navy" aria-label="Menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobileMenuDrawer" class="fixed inset-0 z-50 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex justify-end">
+    <div class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm" id="closeMobileMenuBtn"></div>
+    <div class="relative w-4/5 max-w-sm bg-white h-full shadow-2xl p-6 flex flex-col justify-between z-10">
+      <div>
+        <div class="flex items-center justify-between pb-6 border-b border-slate-100">
+          <span class="font-heading font-bold text-brand-navy">Sinethemba Hope</span>
+          <button type="button" class="p-2 text-slate-400" onclick="document.getElementById('mobileMenuDrawer').classList.add('translate-x-full')">âœ•</button>
+        </div>
+        <nav class="mt-6 flex flex-col gap-4">
+          <a href="about_us.html" class="mobile-nav-link text-base font-bold text-brand-gold py-2">About Us</a>
+          <a href="index.html#programs" class="mobile-nav-link text-base font-semibold text-slate-700 hover:text-brand-gold py-2">Our Programs</a>
+          <a href="index.html#impact" class="mobile-nav-link text-base font-semibold text-slate-700 hover:text-brand-gold py-2">Our Impact</a>
+          <a href="index.html#governance" class="mobile-nav-link text-base font-semibold text-slate-700 hover:text-brand-gold py-2">Section 18A Tax Benefits</a>
+          <a href="donate.html" class="mobile-nav-link text-base font-semibold text-slate-700 hover:text-brand-gold py-2">Ways to Give</a>
+          <a href="contact.html" class="mobile-nav-link text-base font-semibold text-slate-700 hover:text-brand-gold py-2">Contact</a>
+        </nav>
+      </div>
+      <div class="pt-6 border-t border-slate-100">
+        <a href="donate.html" class="w-full inline-flex items-center justify-center py-3 px-6 rounded-full text-base font-bold text-white bg-brand-gold shadow-lg">Donate Now</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO HEADER -->
+    <section class="bg-gradient-to-b from-brand-navy to-brand-navy-dark text-white py-16 sm:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-slate-800 text-amber-400 border border-slate-700">
+          Our Heritage &amp; Purpose
+        </span>
+        <h1 class="font-heading font-extrabold text-3xl sm:text-5xl text-white tracking-tight">
+          About Sinethemba Hope Organisation
+        </h1>
+        <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto font-script text-2xl text-amber-200">
+          "Instilling positive attitude, hope, and determination in communities."
+        </p>
+      </div>
+    </section>
+
+    <!-- FOUNDER & BACKGROUND SECTION -->
+    <section class="py-16 sm:py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Founder Image -->
+          <div class="lg:col-span-5">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900">
+              <img src="assets/images/about-founder.jpg" alt="Pastor Ndumiso Ngema - Founder of Sinethemba Hope Organisation" class="w-full h-auto object-cover" />
+              <div class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-slate-900 via-slate-900/80 to-transparent text-white">
+                <span class="font-bold text-base block text-amber-400">Pastor Ndumiso Ngema</span>
+                <span class="text-xs text-slate-300">Founder &bull; Covenant Fellowship Church International (CFCI) Social Wing</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- History Copy -->
+          <div class="lg:col-span-7 space-y-5">
+            <span class="text-xs font-bold text-brand-gold uppercase tracking-wider block">Background &amp; History</span>
+            <h2 class="font-heading font-bold text-2xl sm:text-3xl text-brand-navy tracking-tight">
+              A Grassroots Vision Born Out of Faith and Compassion
+            </h2>
+            <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+              Sinethemba Hope Organisation is a faith-based organisation (FBO) founded by Pastor Ndumiso Ngema as a dedicated social wing of the <a href="http://www.cfci.org.za" target="_blank" rel="noopener noreferrer" class="font-bold text-brand-navy underline hover:text-brand-gold">Covenant Fellowship Church International</a>. Established in 2006, the initiative arose when church leadership recognized the profound impact of HIV/AIDS and poverty on families within the Pongola community.
+            </p>
+            <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+              Formally registered as an independent NPO in 2008, Sinethemba expanded its outreach to address domestic violence, youth substance abuse, and gender-based violence (GBV). Over the years, the organisation has collaborated with the Department of Social Development (DSD) and the National Department of Health (NDoH) to deliver health education, food parcel relief, school uniforms, and community sporting leagues.
+            </p>
+            <div class="p-4 rounded-2xl bg-amber-50 border border-amber-200/80 text-xs sm:text-sm font-semibold text-amber-900">
+              ðŸ“ Operating directly from church and community premises in Pongola, KwaZulu-Natal.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- VISION & MISSION CARDS -->
+    <section class="py-16 bg-slate-50 border-y border-slate-200/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-8">
+          
+          <div class="bg-white p-8 rounded-3xl border border-slate-200/80 shadow-md space-y-3">
+            <div class="inline-flex p-3 rounded-2xl bg-amber-100 text-amber-800 font-bold text-lg">ðŸŽ¯</div>
+            <h3 class="font-heading font-extrabold text-2xl text-brand-navy">Our Vision</h3>
+            <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+              To be a leading grassroots organisation that transforms lives and instils positive attitude, hope, and determination in vulnerable communities across South Africa.
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-3xl border border-slate-200/80 shadow-md space-y-3">
+            <div class="inline-flex p-3 rounded-2xl bg-sky-100 text-sky-800 font-bold text-lg">ðŸŒ±</div>
+            <h3 class="font-heading font-extrabold text-2xl text-brand-navy">Our Mission</h3>
+            <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+              To contribute meaningfully to rebuilding broken societies by restoring the spiritual, emotional, physical, intellectual, and economic well-being of youth and families.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- THE HOPE FRAMEWORK -->
+    <section class="py-16 sm:py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center space-y-3 mb-14">
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-amber-100 text-amber-800 uppercase tracking-wider">
+            Operational Methodology
+          </span>
+          <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-brand-navy tracking-tight">
+            The "H-O-P-E" Project Framework
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base max-w-xl mx-auto">
+            All programs at Sinethemba Hope Organisation are structured under our 4-pillar acronym:
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- H -->
+          <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200/80 flex flex-col justify-between space-y-4">
+            <div>
+              <span class="text-4xl font-heading font-black text-brand-gold block mb-2">H</span>
+              <h3 class="font-heading font-bold text-lg text-brand-navy mb-2">Healing Services</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Home-based care, sick identification, family counseling, bereavement support, and HIV/STI education.
+              </p>
+            </div>
+            <span class="text-[11px] font-bold text-brand-navy uppercase tracking-wider">Care &bull; Support</span>
+          </div>
+
+          <!-- O -->
+          <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200/80 flex flex-col justify-between space-y-4">
+            <div>
+              <span class="text-4xl font-heading font-black text-brand-gold block mb-2">O</span>
+              <h3 class="font-heading font-bold text-lg text-brand-navy mb-2">Outreach &amp; Uniforms</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                School uniform distributions, stationery packs, and community dialogues across rural schools.
+              </p>
+            </div>
+            <span class="text-[11px] font-bold text-brand-navy uppercase tracking-wider">Schools &bull; Dignity</span>
+          </div>
+
+          <!-- P -->
+          <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200/80 flex flex-col justify-between space-y-4">
+            <div>
+              <span class="text-4xl font-heading font-black text-brand-gold block mb-2">P</span>
+              <h3 class="font-heading font-bold text-lg text-brand-navy mb-2">People Development</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Income generation through communal food gardens, handcrafts, and vocational skill workshops.
+              </p>
+            </div>
+            <span class="text-[11px] font-bold text-brand-navy uppercase tracking-wider">Skills &bull; Livelihood</span>
+          </div>
+
+          <!-- E -->
+          <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200/80 flex flex-col justify-between space-y-4">
+            <div>
+              <span class="text-4xl font-heading font-black text-brand-gold block mb-2">E</span>
+              <h3 class="font-heading font-bold text-lg text-brand-navy mb-2">Evangelism &amp; Sports</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Mobilizing youth through soccer, netball, music, poetry, and positive life-skills development.
+              </p>
+            </div>
+            <span class="text-[11px] font-bold text-brand-navy uppercase tracking-wider">Youth &bull; Sport</span>
+          </div>
+
+        </div>
+
+        <!-- Community Team Image -->
+        <div class="mt-14 rounded-3xl overflow-hidden shadow-xl border border-slate-200">
+          <img src="assets/images/about-community.jpg" alt="Sinethemba Hope Community Team" class="w-full h-80 sm:h-96 object-cover" />
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION BANNER -->
+    <section class="py-16 bg-brand-navy text-white text-center">
+      <div class="max-w-4xl mx-auto px-4 space-y-6">
+        <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-white tracking-tight">
+          Join Us in Restoring Hope
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base max-w-xl mx-auto">
+          Every contribution directly provides a school uniform, shoes, and educational materials to children in need.
+        </p>
+        <div class="flex flex-wrap gap-4 justify-center pt-2">
+          <a href="donate.html" class="px-8 py-3.5 rounded-full font-bold text-sm text-brand-navy bg-brand-gold hover:bg-brand-gold-hover shadow-lg">
+            Donate Now
+          </a>
+          <a href="contact.html" class="px-8 py-3.5 rounded-full font-bold text-sm text-white bg-slate-800 hover:bg-slate-700 border border-slate-600">
+            Volunteer or Partner âž”
           </a>
         </div>
       </div>
-    </div>
-    <nav class="main-nav">
-      <div class="container nav-container">
-        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-          â˜° MENU
-        </button>
-        <ul class="nav-menu">
-          <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
-          <li class="nav-item active"><a href="about_us.html" class="nav-link">ABOUT US</a></li>
-          <li class="nav-item"><a href="get_involved.html" class="nav-link">GET INVOLVED</a></li>
-          <li class="nav-item"><a href="donate.html" class="nav-link">DONATE</a></li>
-          <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-
-  <!-- MAIN CONTENT -->
-  <main class="main-wrapper">
-    <div class="container">
-
-      <!-- PAGE TITLE BANNER -->
-      <div class="banner-ribbon-gold" style="margin-top: 25px;">
-        <h2>ABOUT US</h2>
-      </div>
-
-      <div class="about-grid">
-        <!-- Background Statement / History -->
-        <div class="about-intro-box">
-          <img src="assets/images/about-founder.jpg" alt="Pastor Ndumiso Ngema - Founder" class="about-founder-float" />
-          
-          <h3 class="about-section-heading">Background statement/history</h3>
-          
-          <p class="about-text">
-            Sinethemba Hope Organisation is a faith based organisation (FBO) which was founded by Pastor Ndumiso Ngema as a social wing of the <a href="http://www.cfci.org.za" target="_blank" rel="noopener noreferrer" class="gold-link">Covenant Fellowship Church International</a>. It was established in 2006 after the church realised that its members were either affected or infected by HIV and AIDS. In 2008 it was formally registered and decided to expand its services to the rest of the Pongola community. Sinethemba Hope Organization is based in Pongola. The organisation operates from the church premises in Pongola. It focuses on issues of domestic violence, drug abuse and gender based violence (GBV). Sinethemba has previously received sponsorship from the Department of Social Development (DSD) in the form of food parcels to be given to the poor, and also received a donation of office equipment from another organisation.
-          </p>
-          <p class="about-text">
-            The activities of Sinethemba Hope Organization include providing information on HIV and AIDS to the community, churches, schools and families, sex workers and their clients, in work places, public and privately owned businesses. It also seeks to increase access to HIV and STI prevention services, and provide social and structural interventions to HIV, tuberculosis (TB) and sexually transmitted infections (STI) prevention Its current projects include among others, HIV/AIDS prevention, STIs and TB interventions. Apart from SHIPP, Sinethemba Hope Organization is also working with the National Department of Health (NDoH).
-          </p>
-          <p class="about-text">
-            Since its formation, the communities in which Sinethemba Hope Organization operates have benefited from a lot of services which include intervention in HIV and AIDS through various methods which include dialogues, awareness and distribution of condoms.
-          </p>
-          <p class="about-text about-highlight-italic">
-            The organisation operates from the church premises.
-          </p>
-        </div>
-
-        <!-- Vision and Mission Card -->
-        <div class="vision-mission-card">
-          <h3 class="about-section-heading">Organisational Vision and Mission</h3>
-          
-          <div class="vm-block">
-            <h4 class="vm-title">Vision</h4>
-            <p class="vm-desc">
-              To be a leading organization that transforms and instils positive attitude, hope and determination in communities
-            </p>
-          </div>
-
-          <div class="vm-block">
-            <h4 class="vm-title">Mission</h4>
-            <p class="vm-desc">
-              We contribute in rebuilding the broken society, healing the spiritual, emotional, physical, intellectual and economic well-being of the communities.
-            </p>
-          </div>
-        </div>
-
-        <!-- HOPE Projects Framework -->
-        <div class="hope-projects-card">
-          <h3 class="hope-main-title">Projects</h3>
-          <p class="hope-acronym-intro">
-            The activities of the organization are informed by the acronym "<strong>hope</strong>"
-          </p>
-
-          <!-- H: Healing Services & Outreach -->
-          <div class="hope-section">
-            <h4 class="hope-section-title">HEALING SERVICES</h4>
-            <p class="about-text">
-              The healing service are aimed at bringind hope and healin emotioally, spiritualy, Socialy, and otheewise through:
-            </p>
-            
-            <h5 style="font-size: 20px; color: var(--primary-gold); margin: 15px 0 8px;">Outreach</h5>
-            <ul class="hope-list">
-              <li>Home based Care Service</li>
-              <li>Identification of the sick</li>
-              <li>Provision of health education and counseling to families</li>
-              <li>Bereavement counseling</li>
-              <li>HIV/AIDS education and on going counseling</li>
-              <li>Support Groups for HIV infected and affected</li>
-            </ul>
-          </div>
-
-          <!-- P: People Development -->
-          <div class="hope-section">
-            <h4 class="hope-section-title">People Development</h4>
-            <p class="about-text">
-              Empowering people to generate income through community gardens, hand works etc.
-            </p>
-          </div>
-
-          <!-- E: Evangelism -->
-          <div class="hope-section">
-            <h4 class="hope-section-title">Evangelism</h4>
-            <p class="about-text">
-              Mobilising people through sports, music, poet, dance, etc. to give a positive message about life.
-            </p>
-          </div>
-
-          <!-- Team & Community Banner Image -->
-          <img src="assets/images/about-community.jpg" alt="Sinethemba Hope Organization Team" class="about-banner-image" />
-        </div>
-      </div>
-
-    </div>
+    </section>
   </main>
 
-  <!-- SITE FOOTER -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-col">
-          <h5>About The Organization</h5>
-          <p>
-            <a href="https://www.facebook.com/sibusiso.dlaamini" target="_blank" rel="noopener noreferrer">
-              This website was developed by HUBIES PROJECT<br />
-              Direct contact / CONTACT: 078 777 0126 / EMAIL: zdkadlamini@gmail.com
-            </a>
+  <!-- FOOTER -->
+  <footer class="bg-brand-navy-dark text-slate-400 text-xs py-14 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-12 border-b border-slate-800">
+        <div class="md:col-span-2 space-y-3">
+          <span class="font-heading font-extrabold text-white text-base tracking-tight">SINETHEMBA HOPE</span>
+          <p class="text-slate-400 text-xs leading-relaxed max-w-sm">
+            Registered Non-Profit Organisation dedicated to youth development and community empowerment across South Africa.
           </p>
         </div>
-        <div class="footer-col">
-          <h5>Find Us</h5>
-          <p>Connect with Sinethemba Hope Organization on social media:</p>
-          <div class="social-links">
-            <a href="https://www.facebook.com/pages/Sinethemba-Hope-Organization/1465730450347994" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook Page">
-              f
-            </a>
-          </div>
+        <div>
+          <h4 class="font-bold text-white uppercase text-[11px] mb-3">Links</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="hover:text-white">Home</a></li>
+            <li><a href="about_us.html" class="text-white">About Us</a></li>
+            <li><a href="get_involved.html" class="hover:text-white">Get Involved</a></li>
+            <li><a href="donate.html" class="hover:text-white">Donate</a></li>
+          </ul>
         </div>
-        <div class="footer-col">
-          <h5>Call Us</h5>
-          <p><strong>Sinethemba Hope Organization</strong></p>
-          <p>Tel: <a href="tel:+27343165972">+27 34 316 5972</a></p>
-          <p>Fax: +27 86 218 1989</p>
-          <p>Email: <a href="mailto:info@sinethembahope.org">info@sinethembahope.org</a></p>
-          <div style="margin-top: 10px;">
-            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=V6JWCTBSDK9JU" target="_blank" rel="noopener noreferrer" class="paypal-footer-badge">
-              <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" alt="Donate with PayPal" />
-            </a>
-          </div>
+        <div>
+          <h4 class="font-bold text-white uppercase text-[11px] mb-3">Contact</h4>
+          <p class="mb-2">Tel: +27 34 316 5972</p>
+          <p class="mb-2">Email: info@sinethembahope.org</p>
+          <p>Pongola, KZN, South Africa</p>
         </div>
       </div>
-      <div class="footer-bottom">
-        <div>
-          &copy; 2015 - Present by <a href="http://www.cfci.org.za" target="_blank" rel="noopener noreferrer">CFCI</a> (Covenant Fellowship Church International). All rights reserved.
-        </div>
-        <div>
-          <a href="index.html">Home</a> | 
-          <a href="about_us.html">About Us</a> | 
-          <a href="get_involved.html">Get Involved</a> | 
-          <a href="donate.html">Donate</a> | 
-          <a href="contact.html">Contact</a>
-        </div>
+      <div class="pt-8 text-center text-[11px]">
+        &copy; 2015 &ndash; 2026 Sinethemba Hope Organisation &bull; Affiliated with CFCI.
       </div>
     </div>
   </footer>

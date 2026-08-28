@@ -1,254 +1,805 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sinethemba Hope Organization | Home</title>
-  <meta name="description" content="Sinethemba Hope Organization transforms and instils positive attitude, hope and determination in communities." />
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="stylesheet" href="assets/css/responsive.css" />
+  <title>Sinethemba Hope Organisation | Restoring Dignity & Empowering Youth</title>
+  <meta name="description" content="Sinethemba Hope Organisation is a registered South African non-profit dedicated to youth development, school uniform drives, sports development, and community empowerment." />
+  
+  <!-- Google Fonts: Outfit (Headings) & Plus Jakarta Sans (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN with Custom Tokens -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#0A2540',
+              'navy-dark': '#061727',
+              'navy-light': '#0F3459',
+              gold: '#F59E0B',
+              'gold-hover': '#D97706',
+              'gold-light': '#FEF3C7',
+              sky: '#E0F2FE',
+              'sky-dark': '#0284C7',
+              emerald: '#059669',
+              'emerald-light': '#D1FAE5'
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+            script: ['Dancing Script', 'cursive']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Custom Utilities */
+    .touch-target { min-height: 44px; min-width: 44px; }
+    .glass-nav { backdrop-filter: blur(12px); background-color: rgba(255, 255, 255, 0.95); }
+  </style>
 </head>
-<body>
-  <div class="bg-overlay"></div>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-amber-100 selection:text-amber-900 pb-20 md:pb-0">
 
-  <!-- SITE HEADER -->
-  <header class="site-header">
-    <div class="container">
-      <div class="header-top">
-        <a href="index.html" class="header-brand" aria-label="Sinethemba Hope Organization Home">
-          <img src="assets/images/logo.jpg" alt="Sinethemba Hope Organization Logo" class="header-logo" />
-          <div class="header-titles">
-            <h1>SINETHEMBA HOPE ORGANIZATION</h1>
-            <p class="header-tagline">Instiling positive attitude, hope and determination</p>
+  <!-- =========================================================================
+       A. MODERN TOP NAVIGATION BAR
+       ========================================================================= -->
+  <header class="sticky top-0 z-50 glass-nav border-b border-slate-200/80 transition-all duration-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo & Branding -->
+        <a href="index.html" class="flex items-center gap-3.5 group">
+          <img src="assets/images/logo.jpg" alt="Sinethemba Hope Organisation Logo" class="h-12 w-12 rounded-xl object-cover shadow-sm group-hover:scale-105 transition-transform" />
+          <div class="flex flex-col">
+            <span class="font-heading font-extrabold text-lg sm:text-xl text-brand-navy tracking-tight leading-none group-hover:text-brand-gold transition-colors">
+              SINETHEMBA HOPE
+            </span>
+            <span class="text-xs text-slate-500 font-medium tracking-wide uppercase mt-1">
+              Organisation &bull; NPO
+            </span>
           </div>
         </a>
-        <div>
-          <a href="http://www.cfci.org.za/" target="_blank" rel="noopener noreferrer" class="header-action-btn">
-            KNOW MORE ABOUT CFCI
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="about_us.html" class="text-sm font-semibold text-slate-600 hover:text-brand-navy transition-colors">About Us</a>
+          <a href="#programs" class="text-sm font-semibold text-slate-600 hover:text-brand-navy transition-colors">Our Programs</a>
+          <a href="#impact" class="text-sm font-semibold text-slate-600 hover:text-brand-navy transition-colors">Impact</a>
+          <a href="#governance" class="text-sm font-semibold text-slate-600 hover:text-brand-navy transition-colors">Section 18A / Governance</a>
+          <a href="contact.html" class="text-sm font-semibold text-slate-600 hover:text-brand-navy transition-colors">Contact</a>
+        </nav>
+
+        <!-- Right Header Actions -->
+        <div class="hidden sm:flex items-center gap-4">
+          <a href="http://www.cfci.org.za/" target="_blank" rel="noopener noreferrer" class="hidden lg:inline-flex text-xs font-semibold text-slate-500 hover:text-brand-navy px-3 py-1.5 rounded-lg border border-slate-200 hover:border-slate-300 transition-colors">
+            CFCI Partner â†—
+          </a>
+          <a href="#donate" class="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full text-sm font-bold text-white bg-brand-gold hover:bg-brand-gold-hover shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 touch-target">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+            Donate Now
           </a>
         </div>
+
+        <!-- Mobile Hamburger Button -->
+        <button id="mobileMenuBtn" type="button" class="md:hidden p-2.5 rounded-xl text-slate-600 hover:text-brand-navy hover:bg-slate-100 touch-target" aria-label="Open Mobile Menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+
       </div>
     </div>
-    <nav class="main-nav">
-      <div class="container nav-container">
-        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-          â˜° MENU
-        </button>
-        <ul class="nav-menu">
-          <li class="nav-item active"><a href="index.html" class="nav-link">HOME</a></li>
-          <li class="nav-item"><a href="about_us.html" class="nav-link">ABOUT US</a></li>
-          <li class="nav-item"><a href="get_involved.html" class="nav-link">GET INVOLVED</a></li>
-          <li class="nav-item"><a href="donate.html" class="nav-link">DONATE</a></li>
-          <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></li>
-        </ul>
-      </div>
-    </nav>
   </header>
 
-  <!-- MAIN WRAPPER -->
-  <main class="main-wrapper">
-    <div class="container">
-
-      <!-- HERO SLIDESHOW GALLERY -->
-      <section class="gallery-section" aria-label="Project Photo Gallery">
-        <div class="slideshow-container">
-          <div class="gallery-counter">1/3</div>
-          
-          <!-- Slide 1: Uniform -->
-          <div class="slideshow-slide active">
-            <img src="assets/images/gallery-uniform.jpg" alt="Uniform - Sinethemba Hope Organization Giving out school uniform in one of the schools." />
-            <div class="slide-caption-panel">
-              <h3 class="slide-title">Uniform</h3>
-              <p class="slide-desc">Sinethemba Hope Organization Giving out school uniform in one of the schools.</p>
-            </div>
+  <!-- Mobile Drawer Menu -->
+  <div id="mobileMenuDrawer" class="fixed inset-0 z-50 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex justify-end">
+    <div class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm" id="closeMobileMenuBtn"></div>
+    <div class="relative w-4/5 max-w-sm bg-white h-full shadow-2xl p-6 flex flex-col justify-between z-10">
+      <div>
+        <div class="flex items-center justify-between pb-6 border-b border-slate-100">
+          <div class="flex items-center gap-3">
+            <img src="assets/images/logo.jpg" alt="Logo" class="h-10 w-10 rounded-lg object-cover" />
+            <span class="font-heading font-bold text-brand-navy">Sinethemba Hope</span>
           </div>
-
-          <!-- Slide 2: Games -->
-          <div class="slideshow-slide">
-            <img src="assets/images/gallery-games.jpg" alt="Games - Sporting activities of the youth in the community." />
-            <div class="slide-caption-panel">
-              <h3 class="slide-title">Games</h3>
-              <p class="slide-desc">Sporting activities of the youth in the community.</p>
-            </div>
-          </div>
-
-          <!-- Slide 3: Evangelism -->
-          <div class="slideshow-slide">
-            <img src="assets/images/gallery-evangelism.jpg" alt="Evangelism - Community Outreach" />
-            <div class="slide-caption-panel">
-              <h3 class="slide-title">Evangelism</h3>
-              <p class="slide-desc">Mobilising people through community outreach, youth development and empowerment.</p>
-            </div>
-          </div>
-
-          <!-- Nav Controls -->
-          <button class="gallery-prev" aria-label="Previous Slide">â®</button>
-          <button class="gallery-next" aria-label="Next Slide">â¯</button>
-
-          <!-- Dots -->
-          <div class="gallery-dots">
-            <span class="gallery-dot active" title="Slide 1"></span>
-            <span class="gallery-dot" title="Slide 2"></span>
-            <span class="gallery-dot" title="Slide 3"></span>
-          </div>
+          <button type="button" class="p-2 text-slate-400 hover:text-slate-600" id="closeMobileMenuBtn2" onclick="document.getElementById('mobileMenuDrawer').classList.add('translate-x-full')">
+            âœ•
+          </button>
         </div>
-      </section>
-
-      <!-- LIGHTBOX MODAL -->
-      <div id="lightboxModal" class="lightbox-modal">
-        <span class="lightbox-close">&times;</span>
-        <img id="lightboxImg" src="" alt="Full view" />
+        <nav class="mt-6 flex flex-col gap-4">
+          <a href="about_us.html" class="mobile-nav-link text-base font-semibold text-slate-700 hover:text-brand-gold py-2">About Us</a>
+          <a href="#programs" class="mobile-nav-link text-base font-semibold text-slate-700 hover:text-brand-gold py-2">Our Programs</a>
+          <a href="#impact" class="mobile-nav-link text-base font-semibold text-slate-700 hover:text-brand-gold py-2">Our Impact</a>
+          <a href="#governance" class="mobile-nav-link text-base font-semibold text-slate-700 hover:text-brand-gold py-2">Section 18A Tax Benefits</a>
+          <a href="donate.html" class="mobile-nav-link text-base font-semibold text-slate-700 hover:text-brand-gold py-2">Ways to Give</a>
+          <a href="contact.html" class="mobile-nav-link text-base font-semibold text-slate-700 hover:text-brand-gold py-2">Contact & Inquiries</a>
+        </nav>
       </div>
-
-      <!-- GIVING HOPE TO THE WORLD BANNER -->
-      <div class="banner-ribbon-gold">
-        <h5>Giving Hope To The World</h5>
+      <div class="pt-6 border-t border-slate-100">
+        <a href="#donate" class="mobile-nav-link w-full inline-flex items-center justify-center gap-2 py-3 px-6 rounded-full text-base font-bold text-white bg-brand-gold hover:bg-brand-gold-hover shadow-lg">
+          Donate to Sponsor a Child
+        </a>
       </div>
-
-      <!-- TAGLINE BOX -->
-      <div class="tagline-dark-box">
-        <p>An organization that transforms and instils positive attitude, hope and determination in communities</p>
-      </div>
-
-      <hr class="section-divider" />
-
-      <!-- PROJECT DETAILS & FEATURES SECTION -->
-      <section aria-labelledby="project-details-heading">
-        <div class="banner-ribbon-gold" style="margin-bottom: 20px;">
-          <h5 id="project-details-heading">PROJECT DETAILS</h5>
-        </div>
-
-        <div class="home-content-grid">
-          <!-- Left Column: Overview -->
-          <div class="dark-content-card">
-            <p>
-              Since its formation, the communities in which Sinethemba Hope Organization operates have benefited from a lot of services which include intervention in HIV and AIDS through various methods which include dialogues, awareness and distribution of condoms. Sinethemba Hope Organization has also created and provided employment opportunities to the youths and other community members thereby alleviating poverty in their families.
-            </p>
-            <p>
-              Children around the world are born into a stark reality: will they work in markets and on the streets, or go to school? Will they be trafficked into prostitution, or be useful at home? Will they be child hijackers, or students? These are staggering choices no child should face. At Sinethemba Hope Organization, we transform the lives of children on the edges of societyâ€”trafficked children, drug addicted children, child laborersâ€”and help them regain their human dignity, human rights and pursue their dreams. In other words, we do all we can to help them in the community â€”no matter what their circumstances. Since 2007, weâ€™ve reached about 600 000 youth in the KwaZulu Natal Province of south Africa.
-            </p>
-            <div class="card-footer-action">
-              <a href="about_us.html" class="btn-gold">MORE DETAILS</a>
-            </div>
-          </div>
-
-          <!-- Right Column: 3 Feature Cards -->
-          <div class="home-feature-cards">
-            <!-- Card 1: Donation Impact -->
-            <div class="feature-mini-card">
-              <div class="feature-icon-box">
-                <img src="assets/images/icon-donation.png" alt="Donation impact icon" />
-              </div>
-              <div class="feature-info">
-                <p>
-                  We'll use your donation where it's needed most to support our work. From every R1 you give, R0.80 directly helps us run community projects . R0.20 keeps us running and helps raise the next R1.00
-                </p>
-                <div class="feature-action">
-                  <a href="donate.html" class="btn-gold">MORE DETAILS</a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Card 2: Strategy & Community -->
-            <div class="feature-mini-card">
-              <div class="feature-icon-box">
-                <img src="assets/images/icon-community.png" alt="Community strategies icon" />
-              </div>
-              <div class="feature-info">
-                <p>
-                  Sinethemba Hope Organisation is currently equipped with the latest strategies and approach that seeks to involve the whole community in addressing its challenges.
-                </p>
-                <div class="feature-action">
-                  <a href="get_involved.html" class="btn-gold">MORE DETAILS</a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Card 3: Mission Rebuilding Society -->
-            <div class="feature-mini-card">
-              <div class="feature-icon-box">
-                <img src="assets/images/icon-mission.png" alt="Rebuilding society icon" />
-              </div>
-              <div class="feature-info">
-                <p>
-                  To Contribute in rebuilding the broken society, healing the spiritual, emotional, physical, intellectual and economic well-being of the communities.
-                </p>
-                <div class="feature-action">
-                  <a href="about_us.html" class="btn-gold">MORE DETAILS</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Quick Access Buttons -->
-        <div class="home-quick-actions">
-          <a href="donate.html" class="btn-gold-large">DONATE</a>
-          <a href="get_involved.html" class="btn-gold-large">GET INVOLVED</a>
-          <a href="about_us.html" class="btn-gold-large">OUR MISSION</a>
-        </div>
-      </section>
-
     </div>
-  </main>
+  </div>
 
-  <!-- SITE FOOTER -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-content">
-        <!-- Col 1: Credits & Developer -->
-        <div class="footer-col">
-          <h5>About The Organization</h5>
-          <p>
-            <a href="https://www.facebook.com/sibusiso.dlaamini" target="_blank" rel="noopener noreferrer">
-              This website was developed by HUBIES PROJECT<br />
-              Direct contact / CONTACT: 078 777 0126 / EMAIL: zdkadlamini@gmail.com
-            </a>
+  <main>
+    <!-- =========================================================================
+         B. HIGH-IMPACT HERO SECTION
+         ========================================================================= -->
+    <section class="relative bg-gradient-to-b from-brand-navy via-brand-navy to-brand-navy-dark text-white pt-12 pb-20 lg:pt-20 lg:pb-28 overflow-hidden">
+      <!-- Decorative Background Glow -->
+      <div class="absolute -top-40 -right-40 w-96 h-96 bg-brand-gold/15 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute top-1/2 -left-40 w-80 h-80 bg-brand-sky-dark/15 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          
+          <!-- Left Column: Emotional Copy & CTAs -->
+          <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+            
+            <!-- Trust Badge -->
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/80 border border-slate-700/60 text-xs font-semibold text-amber-400 backdrop-blur-md shadow-inner">
+              <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 1.944A11.954 11.954 0 012.166 5C2.056 5.649 2 6.319 2 7c0 5.225 3.34 9.67 8 11.317C14.66 16.67 18 12.225 18 7c0-.682-.057-1.35-.166-2.001A11.954 11.954 0 0110 1.944zm3.707 6.763a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span>Registered South African Non-Profit (NPO & PBO)</span>
+            </div>
+
+            <!-- Main Headline -->
+            <h1 class="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-tight text-white">
+              Restoring Dignity, Inspiring Hope, and Empowering the <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-200">Next Generation</span>.
+            </h1>
+
+            <!-- Subheadline -->
+            <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              We equip vulnerable children and youth across South Africa with essential school uniforms, educational support, and community sporting programs to break the cycle of poverty and restore human dignity.
+            </p>
+
+            <!-- Dual CTAs -->
+            <div class="pt-2 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <a href="#donate" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-base font-bold text-brand-navy bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 shadow-xl hover:shadow-amber-500/25 transition-all transform hover:-translate-y-0.5 touch-target">
+                Sponsor a Child Today
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                </svg>
+              </a>
+              <a href="#programs" class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full text-base font-semibold text-white bg-slate-800/80 hover:bg-slate-800 border border-slate-700 hover:border-slate-600 transition-all touch-target">
+                Explore Our Programs âž”
+              </a>
+            </div>
+
+            <!-- Social proof micro-indicator -->
+            <div class="pt-3 flex items-center justify-center lg:justify-start gap-4 text-xs text-slate-400">
+              <div class="flex -space-x-2 overflow-hidden">
+                <img class="inline-block h-7 w-7 rounded-full ring-2 ring-brand-navy object-cover" src="assets/images/sponsor-child.jpg" alt="Learner" />
+                <img class="inline-block h-7 w-7 rounded-full ring-2 ring-brand-navy object-cover" src="assets/images/support-family.jpg" alt="Learner" />
+                <img class="inline-block h-7 w-7 rounded-full ring-2 ring-brand-navy object-cover" src="assets/images/gallery-games.jpg" alt="Youth" />
+              </div>
+              <span>Trusted by over <strong>1,200+</strong> sponsored learners and local schools</span>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Visual Showcase Container -->
+          <div class="lg:col-span-5">
+            <div class="relative mx-auto max-w-md lg:max-w-none">
+              <!-- Backdrop Frame -->
+              <div class="absolute -inset-1.5 bg-gradient-to-r from-amber-500 to-sky-500 rounded-3xl blur-md opacity-30"></div>
+              
+              <div class="relative bg-slate-900 rounded-2xl overflow-hidden border border-slate-700/80 shadow-2xl">
+                <img src="assets/images/gallery-uniform.jpg" alt="Sinethemba Hope School Uniform Distribution" class="w-full h-80 sm:h-96 object-cover" />
+                
+                <!-- Floating Mini Metric Overlay -->
+                <div class="absolute bottom-4 left-4 right-4 bg-slate-900/90 backdrop-blur-md p-4 rounded-xl border border-slate-700/60 flex items-center justify-between text-left">
+                  <div>
+                    <span class="text-xs font-semibold text-amber-400 uppercase tracking-wider block">School Uniform Drive</span>
+                    <span class="text-sm font-bold text-white">Direct School Distribution in KZN</span>
+                  </div>
+                  <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                    Active
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         C. ABOVE-THE-FOLD TRUST BAR / SOCIAL PROOF STRIP
+         ========================================================================= -->
+    <section id="impact" class="relative -mt-8 z-20 max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="bg-white rounded-2xl shadow-xl border border-slate-200/80 p-6 sm:p-8">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 divide-y lg:divide-y-0 lg:divide-x divide-slate-100">
+          
+          <!-- Metric 1 -->
+          <div class="flex flex-col items-center text-center p-2">
+            <div class="text-3xl sm:text-4xl font-extrabold text-brand-navy font-heading tracking-tight">1,200+</div>
+            <p class="text-xs sm:text-sm font-semibold text-slate-600 mt-1">Children Uniformed & Supported</p>
+          </div>
+
+          <!-- Metric 2 -->
+          <div class="flex flex-col items-center text-center p-2 pt-6 lg:pt-2">
+            <div class="text-3xl sm:text-4xl font-extrabold text-brand-navy font-heading tracking-tight">10+ Years</div>
+            <p class="text-xs sm:text-sm font-semibold text-slate-600 mt-1">Grassroots Community Service</p>
+          </div>
+
+          <!-- Metric 3 -->
+          <div class="flex flex-col items-center text-center p-2 pt-6 lg:pt-2">
+            <div class="text-3xl sm:text-4xl font-extrabold text-brand-emerald font-heading tracking-tight text-emerald-600">100%</div>
+            <p class="text-xs sm:text-sm font-semibold text-slate-600 mt-1">Section 18A Tax-Deductible</p>
+          </div>
+
+          <!-- Metric 4 -->
+          <div class="flex flex-col items-center text-center p-2 pt-6 lg:pt-2">
+            <div class="text-3xl sm:text-4xl font-extrabold text-brand-navy font-heading tracking-tight">80 / 20</div>
+            <p class="text-xs sm:text-sm font-semibold text-slate-600 mt-1">Direct Program Funding Allocation</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         D. INTERACTIVE TANGIBLE GIVING DONATION SECTION
+         ========================================================================= -->
+    <section id="donate" class="py-16 sm:py-24 bg-slate-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6">
+        
+        <div class="text-center space-y-3 mb-10">
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-amber-100 text-amber-800 uppercase tracking-wider">
+            Make A Direct Difference
+          </span>
+          <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-brand-navy tracking-tight">
+            Transparent, Impact-Driven Giving
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base max-w-xl mx-auto">
+            Choose a verified giving option below. 80% of every Rand directly funds school uniforms, stationery, and youth development in underprivileged communities.
           </p>
         </div>
 
-        <!-- Col 2: Social & Find Us -->
-        <div class="footer-col">
-          <h5>Find Us</h5>
-          <p>Connect with Sinethemba Hope Organization on social media:</p>
-          <div class="social-links">
-            <a href="https://www.facebook.com/pages/Sinethemba-Hope-Organization/1465730450347994" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook Page">
-              f
+        <!-- Giving Engine Card -->
+        <div class="bg-white rounded-3xl shadow-xl border border-slate-200/80 p-6 sm:p-10">
+          
+          <!-- Frequency Toggle -->
+          <div class="flex justify-center mb-8">
+            <div class="inline-flex p-1.5 bg-slate-100 rounded-full border border-slate-200">
+              <button type="button" id="freqOnceBtn" class="px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-white text-brand-navy shadow-sm transition-all touch-target">
+                Give Once
+              </button>
+              <button type="button" id="freqMonthlyBtn" class="px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold text-slate-600 hover:text-brand-navy transition-all touch-target">
+                Give Monthly (Sustained Impact)
+              </button>
+            </div>
+          </div>
+
+          <!-- Suggested Amount Preset Cards -->
+          <div class="grid sm:grid-cols-3 gap-4 mb-6">
+            
+            <!-- Tier 1: R150 -->
+            <div data-amount="150" class="donation-preset-card relative p-5 rounded-2xl border border-slate-200 hover:border-slate-300 bg-white cursor-pointer transition-all hover:shadow-md text-left group">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-heading font-extrabold text-2xl text-brand-navy">R150</span>
+                <span class="text-xs font-medium text-slate-400">~$10 USD</span>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed font-medium">
+                Essential School Stationery & Study Pack for 1 student.
+              </p>
+            </div>
+
+            <!-- Tier 2: R450 (Default Selected & Most Popular) -->
+            <div data-amount="450" class="donation-preset-card relative p-5 rounded-2xl border-2 border-brand-gold bg-amber-50/60 ring-2 ring-brand-gold cursor-pointer transition-all shadow-md text-left group">
+              <span class="absolute -top-3 right-4 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-brand-gold text-white uppercase tracking-wider shadow-sm">
+                Most Popular
+              </span>
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-heading font-extrabold text-2xl text-brand-navy">R450</span>
+                <span class="text-xs font-medium text-slate-500">~$25 USD</span>
+              </div>
+              <p class="text-xs text-slate-700 leading-relaxed font-semibold">
+                Full Tailored School Uniform & Shoes Set.
+              </p>
+            </div>
+
+            <!-- Tier 3: R1,200 -->
+            <div data-amount="1200" class="donation-preset-card relative p-5 rounded-2xl border border-slate-200 hover:border-slate-300 bg-white cursor-pointer transition-all hover:shadow-md text-left group">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-heading font-extrabold text-2xl text-brand-navy">R1,200</span>
+                <span class="text-xs font-medium text-slate-400">~$70 USD</span>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed font-medium">
+                Youth Sports Team Equipment & Coaching Kit.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Custom Amount Input -->
+          <div class="mb-8">
+            <label for="customAmountInput" class="block text-xs font-semibold text-slate-600 uppercase tracking-wider mb-2">
+              Or Enter a Custom Amount (ZAR)
+            </label>
+            <div class="relative rounded-xl border border-slate-300 focus-within:border-brand-gold focus-within:ring-2 focus-within:ring-brand-gold/30 bg-white">
+              <span class="absolute inset-y-0 left-0 pl-4 flex items-center font-bold text-slate-400">R</span>
+              <input type="number" id="customAmountInput" placeholder="Enter amount (e.g. 500)" min="10" class="w-full pl-9 pr-4 py-3 rounded-xl text-slate-900 font-semibold focus:outline-none text-base" />
+            </div>
+          </div>
+
+          <!-- Real-Time Impact Summary Box -->
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/80 mb-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="text-center sm:text-left">
+              <div class="text-xs font-medium text-slate-500 uppercase tracking-wide">Selected Donation</div>
+              <div class="text-lg font-bold text-brand-navy">
+                <span id="donationSummaryAmount">R450</span>
+                <span id="donationSummaryFreq" class="text-sm text-slate-500 font-normal"> (One-Time)</span>
+              </div>
+              <div id="donationSummaryImpact" class="text-xs text-emerald-700 font-medium mt-0.5">
+                Provides a full tailored school uniform set and shoes for 1 learner.
+              </div>
+            </div>
+            <div class="flex items-center gap-1.5 text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1.5 rounded-lg whitespace-nowrap">
+              <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              Section 18A Tax Certificate Included
+            </div>
+          </div>
+
+          <!-- Primary Proceed Button (Links to verified PayPal / Payment Portal) -->
+          <a id="proceedDonationBtn" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=V6JWCTBSDK9JU" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-3 py-4 px-8 rounded-full text-base sm:text-lg font-extrabold text-white bg-gradient-to-r from-brand-gold to-amber-600 hover:from-amber-500 hover:to-amber-700 shadow-xl hover:shadow-amber-500/25 transition-all transform hover:-translate-y-0.5 touch-target">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+            Proceed to Secure Donation
+          </a>
+
+          <!-- Trust & Security Badges -->
+          <div class="mt-8 pt-6 border-t border-slate-100 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-500">
+            <span class="inline-flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 1.944A11.954 11.954 0 012.166 5C2.056 5.649 2 6.319 2 7c0 5.225 3.34 9.67 8 11.317C14.66 16.67 18 12.225 18 7c0-.682-.057-1.35-.166-2.001A11.954 11.954 0 0110 1.944zm3.707 6.763a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              SSL 256-Bit Encrypted
+            </span>
+            <span class="inline-flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-brand-navy" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"/>
+                <path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd"/>
+              </svg>
+              Card & Instant EFT
+            </span>
+            <span class="inline-flex items-center gap-1.5">
+              <img src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" class="w-0 h-0" alt="" />
+              Official PayPal Partner
+            </span>
+            <span class="inline-flex items-center gap-1.5">
+              SARS PBO Compliant
+            </span>
+          </div>
+
+          <!-- Direct Bank EFT Accordion for Corporate & Direct Donors -->
+          <div class="mt-6">
+            <button type="button" id="eftToggleBtn" class="w-full py-3 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs sm:text-sm font-semibold flex items-center justify-between transition-colors touch-target">
+              <span class="flex items-center gap-2">
+                ðŸ›ï¸ Need Direct Bank Deposit (EFT) Details? Click Here
+              </span>
+              <svg class="toggle-icon w-4 h-4 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+
+            <div id="eftDetailsBox" class="hidden mt-3 p-5 rounded-2xl bg-slate-900 text-white border border-slate-700 text-sm space-y-2.5">
+              <div class="flex items-center justify-between pb-2 border-b border-slate-800">
+                <span class="font-bold text-amber-400 uppercase tracking-wider text-xs">Official FNB Banking Details</span>
+                <button id="copyEftBtn" type="button" class="text-xs font-semibold px-3 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-600 transition-colors">
+                  Copy Details
+                </button>
+              </div>
+              <div class="grid sm:grid-cols-2 gap-2 text-xs sm:text-sm text-slate-300">
+                <div><strong class="text-white">Account Holder:</strong> Sinethemba Hope organization</div>
+                <div><strong class="text-white">Bank:</strong> First National Bank (FNB)</div>
+                <div><strong class="text-white">Account Number:</strong> 62233690404</div>
+                <div><strong class="text-white">Branch Code:</strong> 250655</div>
+              </div>
+              <p id="copyFeedback" class="text-xs text-emerald-400 font-semibold opacity-0 transition-opacity">âœ“ Banking details copied to clipboard!</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         E. THREE CORE PROGRAM CARDS (FOCUS AREAS)
+         ========================================================================= -->
+    <section id="programs" class="py-16 sm:py-24 bg-white border-y border-slate-200/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
+          <div class="space-y-3">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-sky-100 text-sky-800 uppercase tracking-wider">
+              Our Core Pillars
+            </span>
+            <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-brand-navy tracking-tight">
+              Programs Changing Lives in Communities
+            </h2>
+          </div>
+          <a href="about_us.html" class="inline-flex items-center gap-2 font-bold text-sm text-brand-gold hover:text-brand-gold-hover transition-colors">
+            Learn About Our Full Story &amp; Leadership âž”
+          </a>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          
+          <!-- Program 1: Uniform Drives -->
+          <div class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group">
+            <div class="h-56 overflow-hidden relative">
+              <img src="assets/images/gallery-uniform.jpg" alt="School Uniform Distribution" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold bg-white/90 backdrop-blur-md text-brand-navy shadow-sm">
+                Education &amp; Dignity
+              </span>
+            </div>
+            <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <h3 class="font-heading font-bold text-xl text-brand-navy mb-2 group-hover:text-brand-gold transition-colors">
+                  School Uniform &amp; Basic Needs Drives
+                </h3>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                  Removing barriers to education by providing complete, tailored school uniforms, shoes, and stationery to underprivileged learners across rural schools.
+                </p>
+              </div>
+              <a href="get_involved.html" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-navy group-hover:text-brand-gold transition-colors">
+                Support This Program âž”
+              </a>
+            </div>
+          </div>
+
+          <!-- Program 2: Youth Sports -->
+          <div class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group">
+            <div class="h-56 overflow-hidden relative">
+              <img src="assets/images/gallery-games.jpg" alt="Youth Sports and Athletics" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold bg-white/90 backdrop-blur-md text-brand-navy shadow-sm">
+                Sports &amp; Wellness
+              </span>
+            </div>
+            <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <h3 class="font-heading font-bold text-xl text-brand-navy mb-2 group-hover:text-brand-gold transition-colors">
+                  Youth Sports &amp; Life Skills
+                </h3>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                  Fostering teamwork, mental well-being, discipline, and healthy living through soccer leagues, netball tournaments, and youth leadership camps.
+                </p>
+              </div>
+              <a href="get_involved.html" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-navy group-hover:text-brand-gold transition-colors">
+                Support This Program âž”
+              </a>
+            </div>
+          </div>
+
+          <!-- Program 3: Academic & Community Support -->
+          <div class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group">
+            <div class="h-56 overflow-hidden relative">
+              <img src="assets/images/about-community.jpg" alt="Academic Mentorship and Outreach" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <span class="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-bold bg-white/90 backdrop-blur-md text-brand-navy shadow-sm">
+                Community Upliftment
+              </span>
+            </div>
+            <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <h3 class="font-heading font-bold text-xl text-brand-navy mb-2 group-hover:text-brand-gold transition-colors">
+                  Mentorship &amp; Health Interventions
+                </h3>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                  Community health dialogues, HIV/TB awareness, bereavement support, and food parcel relief programs in collaboration with social partners.
+                </p>
+              </div>
+              <a href="get_involved.html" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-navy group-hover:text-brand-gold transition-colors">
+                Support This Program âž”
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         F. RADICAL TRANSPARENCY & GOVERNANCE (SECTION 18A TAX BENEFITS)
+         ========================================================================= -->
+    <section id="governance" class="py-16 sm:py-20 bg-brand-navy text-white relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="grid lg:grid-cols-12 gap-10 items-center">
+          
+          <div class="lg:col-span-8 space-y-4">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+              âœ“ Institutional Trust &amp; Compliance
+            </span>
+            <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-white tracking-tight">
+              Maximize Your Impact with Section 18A Tax Deductibility
+            </h2>
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+              Sinethemba Hope Organisation is a fully registered Public Benefit Organisation (PBO). All monetary donations by South African taxpayers and corporations qualify for a Section 18A tax certificate, allowing deductions up to 10% of taxable income.
+            </p>
+            <div class="flex flex-wrap gap-4 pt-2">
+              <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-slate-800 text-xs font-semibold text-slate-200 border border-slate-700">
+                ðŸ›ï¸ Registered NPO
+              </span>
+              <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-slate-800 text-xs font-semibold text-slate-200 border border-slate-700">
+                ðŸ“„ SARS Approved PBO
+              </span>
+              <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-slate-800 text-xs font-semibold text-slate-200 border border-slate-700">
+                ðŸ¤ B-BBEE SED Compliant
+              </span>
+            </div>
+          </div>
+
+          <div class="lg:col-span-4 bg-slate-800/90 rounded-2xl p-6 border border-slate-700 shadow-xl space-y-4">
+            <h3 class="font-heading font-bold text-lg text-amber-400">
+              Corporate CSI Partnership?
+            </h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              We partner with corporate grantmakers and CSI departments on audited, milestone-driven community development projects.
+            </p>
+            <a href="contact.html?type=csi" class="w-full inline-flex items-center justify-center py-3 px-4 rounded-xl text-xs sm:text-sm font-bold text-white bg-brand-gold hover:bg-brand-gold-hover transition-colors">
+              Request Section 18A / CSI Pack âž”
             </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         G. HUMAN STORYTELLING / BENEFICIARY SPOTLIGHT
+         ========================================================================= -->
+    <section class="py-16 sm:py-24 bg-slate-50">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6">
+        
+        <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-slate-200/80 grid md:grid-cols-12 gap-8 items-center">
+          
+          <div class="md:col-span-5">
+            <img src="assets/images/sponsor-child.jpg" alt="Learner in uniform" class="rounded-2xl w-full h-72 object-cover shadow-md" />
+          </div>
+
+          <div class="md:col-span-7 space-y-4">
+            <div class="inline-flex items-center gap-2 text-xs font-bold text-brand-gold uppercase tracking-wider">
+              Beneficiary Spotlight &bull; Pongola Community
+            </div>
+            <h3 class="font-heading font-bold text-2xl sm:text-3xl text-brand-navy tracking-tight">
+              "A new school uniform gave me my confidence back."
+            </h3>
+            <p class="text-sm sm:text-base text-slate-600 leading-relaxed italic">
+              "Before Sinethemba Hope visited our school, I had torn shoes and an outgrown shirt. I was embarrassed to participate in class. Receiving a brand new uniform and stationery made me proud to walk into school every day."
+            </p>
+            <div class="pt-2 flex items-center justify-between border-t border-slate-100">
+              <div>
+                <span class="text-xs font-bold text-slate-900 block">Thabo, Grade 7 Learner</span>
+                <span class="text-[11px] text-slate-500">Sponsored through Sinethemba Uniform Drive</span>
+              </div>
+              <a href="#donate" class="text-xs font-bold text-brand-gold hover:text-brand-gold-hover">
+                Sponsor a Learner (R450) âž”
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         H. STREAMLINED CONTACT & VOLUNTEER INTAKE FORM
+         ========================================================================= -->
+    <section id="contact" class="py-16 sm:py-24 bg-white border-t border-slate-200/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid lg:grid-cols-12 gap-12">
+          
+          <!-- Contact Info -->
+          <div class="lg:col-span-5 space-y-6">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-amber-100 text-amber-800 uppercase tracking-wider">
+              Get In Touch
+            </span>
+            <h2 class="font-heading font-extrabold text-3xl text-brand-navy tracking-tight">
+              We Would Love to Hear from You
+            </h2>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Whether you want to volunteer your skills, sponsor a school drive, or inquire about governance, our team is ready to assist.
+            </p>
+
+            <div class="space-y-4 pt-2 text-sm text-slate-700">
+              <div class="flex items-start gap-3.5">
+                <span class="text-lg">ðŸ“</span>
+                <div>
+                  <strong class="block text-brand-navy">Headquarters:</strong>
+                  Pongola Ncotshane, Main Street, P.O. Box 1278, Pongola 3170, South Africa
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3.5">
+                <span class="text-lg">ðŸ“ž</span>
+                <div>
+                  <strong class="block text-brand-navy">Telephone:</strong>
+                  <a href="tel:+27343165972" class="hover:text-brand-gold">+27 34 316 5972</a>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3.5">
+                <span class="text-lg">âœ‰ï¸</span>
+                <div>
+                  <strong class="block text-brand-navy">Email Inquiries:</strong>
+                  <a href="mailto:info@sinethembahope.org" class="hover:text-brand-gold">info@sinethembahope.org</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Channel -->
+            <div class="pt-4">
+              <span class="text-xs font-bold uppercase tracking-wider text-slate-400 block mb-2">Connect with Us</span>
+              <a href="https://www.facebook.com/pages/Sinethemba-Hope-Organization/1465730450347994" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-xs font-bold text-slate-700 transition-colors">
+                <svg class="w-4 h-4 text-[#1877F2]" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+                Follow on Facebook
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="lg:col-span-7 bg-slate-50 p-8 sm:p-10 rounded-3xl border border-slate-200/80 shadow-sm">
+            <h3 class="font-heading font-bold text-xl text-brand-navy mb-6">Send an Inquiry or Volunteer Request</h3>
+            
+            <form id="contactForm" class="space-y-4">
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="fullName" class="block text-xs font-semibold text-slate-600 mb-1">Full Name *</label>
+                  <input type="text" id="fullName" required placeholder="John Doe" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20" />
+                </div>
+                <div>
+                  <label for="emailAddr" class="block text-xs font-semibold text-slate-600 mb-1">Email Address *</label>
+                  <input type="email" id="emailAddr" required placeholder="john@example.com" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20" />
+                </div>
+              </div>
+
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="phoneNum" class="block text-xs font-semibold text-slate-600 mb-1">Phone / Mobile</label>
+                  <input type="tel" id="phoneNum" placeholder="+27 ..." class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20" />
+                </div>
+                <div>
+                  <label for="inquiryType" class="block text-xs font-semibold text-slate-600 mb-1">Inquiry Type</label>
+                  <select id="inquiryType" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20 bg-white">
+                    <option value="general">General Support &amp; Information</option>
+                    <option value="corporate">Corporate Social Investment (CSI)</option>
+                    <option value="volunteer">Volunteer &amp; Skills Sharing</option>
+                    <option value="section18a">Section 18A Tax Certificate</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label for="messageText" class="block text-xs font-semibold text-slate-600 mb-1">Message *</label>
+                <textarea id="messageText" required rows="4" placeholder="How can we assist you?" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20"></textarea>
+              </div>
+
+              <button type="submit" class="w-full py-3.5 px-6 rounded-xl font-bold text-sm text-white bg-brand-navy hover:bg-brand-navy-light shadow-md transition-all touch-target">
+                Submit Message
+              </button>
+
+              <div id="contactSuccessAlert" class="hidden p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-semibold text-center">
+                âœ“ Thank you! Your message has been received. Our team will contact you shortly.
+              </div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       I. COMPREHENSIVE MODERN FOOTER
+       ========================================================================= -->
+  <footer class="bg-brand-navy-dark text-slate-400 text-xs py-14 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pb-12 border-b border-slate-800">
+        
+        <!-- Col 1: Bio -->
+        <div class="lg:col-span-2 space-y-3">
+          <div class="flex items-center gap-3">
+            <img src="assets/images/logo.jpg" alt="Logo" class="h-9 w-9 rounded-lg object-cover" />
+            <span class="font-heading font-extrabold text-white text-base tracking-tight">SINETHEMBA HOPE</span>
+          </div>
+          <p class="text-slate-400 text-xs leading-relaxed max-w-sm">
+            A registered non-profit and public benefit organisation committed to restoring dignity, providing school uniforms, and empowering vulnerable youth in South Africa.
+          </p>
+          <div class="pt-2 text-[11px] text-slate-500">
+            Registered Non-Profit Organisation &bull; Section 18A PBO Status
           </div>
         </div>
 
-        <!-- Col 3: Contact & Direct Donation -->
-        <div class="footer-col">
-          <h5>Call Us</h5>
-          <p><strong>Sinethemba Hope Organization</strong></p>
-          <p>Tel: <a href="tel:+27343165972">+27 34 316 5972</a></p>
-          <p>Fax: +27 86 218 1989</p>
-          <p>Email: <a href="mailto:info@sinethembahope.org">info@sinethembahope.org</a></p>
-          <div style="margin-top: 10px;">
-            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=V6JWCTBSDK9JU" target="_blank" rel="noopener noreferrer" class="paypal-footer-badge">
-              <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" alt="Donate with PayPal" />
-            </a>
-          </div>
+        <!-- Col 2: Quick Links -->
+        <div>
+          <h4 class="font-bold text-white uppercase tracking-wider text-[11px] mb-3">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="about_us.html" class="hover:text-white transition-colors">About Us &amp; Story</a></li>
+            <li><a href="#programs" class="hover:text-white transition-colors">Uniform Drives</a></li>
+            <li><a href="#programs" class="hover:text-white transition-colors">Youth Sports Program</a></li>
+            <li><a href="get_involved.html" class="hover:text-white transition-colors">Sponsor a Child</a></li>
+            <li><a href="donate.html" class="hover:text-white transition-colors">Ways to Donate</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Governance -->
+        <div>
+          <h4 class="font-bold text-white uppercase tracking-wider text-[11px] mb-3">Governance &amp; Tax</h4>
+          <ul class="space-y-2">
+            <li><a href="#governance" class="hover:text-white transition-colors">Section 18A Receipts</a></li>
+            <li><a href="#governance" class="hover:text-white transition-colors">B-BBEE SED Verification</a></li>
+            <li><a href="http://www.cfci.org.za/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">CFCI Partnership</a></li>
+            <li><a href="contact.html" class="hover:text-white transition-colors">Financial Accountability</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact Direct -->
+        <div>
+          <h4 class="font-bold text-white uppercase tracking-wider text-[11px] mb-3">Contact</h4>
+          <p class="leading-relaxed mb-2">Tel: <a href="tel:+27343165972" class="text-white hover:text-amber-400">+27 34 316 5972</a></p>
+          <p class="leading-relaxed mb-2">Email: <a href="mailto:info@sinethembahope.org" class="text-white hover:text-amber-400">info@sinethembahope.org</a></p>
+          <p class="leading-relaxed">Pongola, KwaZulu-Natal, SA</p>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px]">
+        <div>
+          &copy; 2015 &ndash; 2026 Sinethemba Hope Organisation &bull; Affiliated with <a href="http://www.cfci.org.za" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-white underline">CFCI</a>.
+        </div>
+        <div>
+          Website optimized &amp; developed by <a href="https://www.facebook.com/sibusiso.dlaamini" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-white underline">HUBIES PROJECT</a>.
         </div>
       </div>
 
-      <div class="footer-bottom">
-        <div>
-          &copy; 2015 - Present by <a href="http://www.cfci.org.za" target="_blank" rel="noopener noreferrer">CFCI</a> (Covenant Fellowship Church International). All rights reserved.
-        </div>
-        <div>
-          <a href="index.html">Home</a> | 
-          <a href="about_us.html">About Us</a> | 
-          <a href="get_involved.html">Get Involved</a> | 
-          <a href="donate.html">Donate</a> | 
-          <a href="contact.html">Contact</a>
-        </div>
-      </div>
     </div>
   </footer>
 
+  <!-- =========================================================================
+       J. STICKY MOBILE BOTTOM CTA BAR
+       ========================================================================= -->
+  <div class="fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 p-3 md:hidden shadow-lg flex items-center justify-between gap-3">
+    <div class="flex flex-col pl-2">
+      <span class="text-[10px] text-slate-500 font-bold uppercase">Sponsor A Child</span>
+      <span class="text-xs font-bold text-brand-navy">From R150 / mo</span>
+    </div>
+    <a href="#donate" class="inline-flex items-center gap-1.5 px-6 py-2.5 rounded-full text-xs font-bold text-brand-navy bg-brand-gold hover:bg-brand-gold-hover shadow-md touch-target">
+      <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+      </svg>
+      Donate Now
+    </a>
+  </div>
+
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/gallery.js"></script>
 </body>
 </html>

@@ -1,183 +1,197 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GET INVOLVED | Sinethemba Hope Organization</title>
-  <meta name="description" content="Get involved with Sinethemba Hope Organization. Sponsor a child, support a family, corporate partnerships and volunteering." />
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="stylesheet" href="assets/css/responsive.css" />
+  <title>Get Involved | Sinethemba Hope Organisation</title>
+  <meta name="description" content="Get involved with Sinethemba Hope Organisation. Sponsor a child, support a family, corporate CSI partnerships, and volunteering." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#0A2540',
+              'navy-dark': '#061727',
+              'navy-light': '#0F3459',
+              gold: '#F59E0B',
+              'gold-hover': '#D97706',
+              sky: '#E0F2FE',
+              'sky-dark': '#0284C7',
+              emerald: '#059669'
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body>
-  <div class="bg-overlay"></div>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased pb-20 md:pb-0">
 
-  <!-- SITE HEADER -->
-  <header class="site-header">
-    <div class="container">
-      <div class="header-top">
-        <a href="index.html" class="header-brand" aria-label="Sinethemba Hope Organization Home">
-          <img src="assets/images/logo.jpg" alt="Sinethemba Hope Organization Logo" class="header-logo" />
-          <div class="header-titles">
-            <h1>SINETHEMBA HOPE ORGANIZATION</h1>
-            <p class="header-tagline">Instiling positive attitude, hope and determination</p>
+  <!-- TOP NAVIGATION -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-3.5 group">
+          <img src="assets/images/logo.jpg" alt="Logo" class="h-12 w-12 rounded-xl object-cover shadow-sm group-hover:scale-105 transition-transform" />
+          <div class="flex flex-col">
+            <span class="font-heading font-extrabold text-lg sm:text-xl text-brand-navy tracking-tight leading-none group-hover:text-brand-gold transition-colors">
+              SINETHEMBA HOPE
+            </span>
+            <span class="text-xs text-slate-500 font-medium tracking-wide uppercase mt-1">Organisation &bull; NPO</span>
           </div>
         </a>
-        <div>
-          <a href="http://www.cfci.org.za/" target="_blank" rel="noopener noreferrer" class="header-action-btn">
-            KNOW MORE ABOUT CFCI
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="about_us.html" class="text-sm font-semibold text-slate-600 hover:text-brand-navy transition-colors">About Us</a>
+          <a href="index.html#programs" class="text-sm font-semibold text-slate-600 hover:text-brand-navy transition-colors">Our Programs</a>
+          <a href="index.html#impact" class="text-sm font-semibold text-slate-600 hover:text-brand-navy transition-colors">Impact</a>
+          <a href="index.html#governance" class="text-sm font-semibold text-slate-600 hover:text-brand-navy transition-colors">Section 18A / Governance</a>
+          <a href="contact.html" class="text-sm font-semibold text-slate-600 hover:text-brand-navy transition-colors">Contact</a>
+        </nav>
+        <div class="hidden sm:flex items-center gap-4">
+          <a href="donate.html" class="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full text-sm font-bold text-white bg-brand-gold hover:bg-brand-gold-hover shadow-md">
+            Donate Now
           </a>
         </div>
+        <button id="mobileMenuBtn" type="button" class="md:hidden p-2.5 rounded-xl text-slate-600 hover:text-brand-navy" aria-label="Menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+        </button>
       </div>
     </div>
-    <nav class="main-nav">
-      <div class="container nav-container">
-        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-          â˜° MENU
-        </button>
-        <ul class="nav-menu">
-          <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
-          <li class="nav-item"><a href="about_us.html" class="nav-link">ABOUT US</a></li>
-          <li class="nav-item active"><a href="get_involved.html" class="nav-link">GET INVOLVED</a></li>
-          <li class="nav-item"><a href="donate.html" class="nav-link">DONATE</a></li>
-          <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></li>
-        </ul>
-      </div>
-    </nav>
   </header>
 
-  <!-- MAIN CONTENT -->
-  <main class="main-wrapper">
-    <div class="container">
-
-      <!-- HERO BANNER IMAGE -->
-      <div class="page-hero-banner">
-        <img src="assets/images/getinvolved-banner.jpg" alt="Get Involved - Sinethemba Hope Organization" />
-      </div>
-
-      <!-- PAGE TITLE BANNER -->
-      <div class="banner-ribbon-gold">
-        <h2>GET INVOLVED</h2>
-      </div>
-
-      <!-- 3 PILLARS GRID -->
-      <div class="get-involved-grid">
-        <!-- 1. Sponsor a Child -->
-        <div class="involve-card">
-          <div class="involve-card-title">SPONSOR A CHILD</div>
-          <img src="assets/images/sponsor-child.jpg" alt="Sponsor a child" class="involve-card-img" />
-          <p class="involve-card-text">
-            Like many children in this world, they need your love and support to have access to things such as clean water, nutritious food, and an education, so he can grow up to be a healthy and productive adult.
-          </p>
-          <div class="involve-card-action">
-            <a href="contact.html" class="btn-gold">GET INVOLVED TODAY</a>
-          </div>
+  <!-- Mobile Drawer -->
+  <div id="mobileMenuDrawer" class="fixed inset-0 z-50 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex justify-end">
+    <div class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm" id="closeMobileMenuBtn"></div>
+    <div class="relative w-4/5 max-w-sm bg-white h-full shadow-2xl p-6 flex flex-col justify-between z-10">
+      <div>
+        <div class="flex items-center justify-between pb-6 border-b border-slate-100">
+          <span class="font-heading font-bold text-brand-navy">Sinethemba Hope</span>
+          <button type="button" class="p-2 text-slate-400" onclick="document.getElementById('mobileMenuDrawer').classList.add('translate-x-full')">âœ•</button>
         </div>
-
-        <!-- 2. Support a Family -->
-        <div class="involve-card">
-          <div class="involve-card-title">Support a Family</div>
-          <img src="assets/images/support-family.jpg" alt="Support a family" class="involve-card-img" />
-          <p class="involve-card-text">
-            Supporting vulnerable families through nutrition packages, counseling, and sustainable livelihood skills to restore stability and hope in households.
-          </p>
-          <div class="involve-card-action">
-            <a href="contact.html" class="btn-gold">GET INVOLVED TODAY</a>
-          </div>
-        </div>
-
-        <!-- 3. Corporate Support -->
-        <div class="involve-card">
-          <div class="involve-card-title">CORPORATE SUPPORT</div>
-          <div style="background: rgba(0,0,0,0.3); padding: 15px; border: 1px solid #333; margin-bottom: 12px; height: 180px; display: flex; align-items: center; justify-content: center; text-align: center;">
-            <p style="font-size: 14px; font-weight: 600; color: var(--primary-gold);">
-              Partner with us on Corporate Social Investment (CSI) initiatives to create lasting positive community transformation.
-            </p>
-          </div>
-          <p class="involve-card-text">
-            Partner with Sinethemba Hope Organization through CSR / CSI sponsorships, skill development funding, or essential resource donations.
-          </p>
-          <div class="involve-card-action">
-            <a href="contact.html" class="btn-gold">GET INVOLVED TODAY</a>
-          </div>
-        </div>
+        <nav class="mt-6 flex flex-col gap-4">
+          <a href="about_us.html" class="mobile-nav-link text-base font-semibold text-slate-700 hover:text-brand-gold py-2">About Us</a>
+          <a href="get_involved.html" class="mobile-nav-link text-base font-bold text-brand-gold py-2">Get Involved</a>
+          <a href="index.html#programs" class="mobile-nav-link text-base font-semibold text-slate-700 hover:text-brand-gold py-2">Our Programs</a>
+          <a href="donate.html" class="mobile-nav-link text-base font-semibold text-slate-700 hover:text-brand-gold py-2">Ways to Give</a>
+          <a href="contact.html" class="mobile-nav-link text-base font-semibold text-slate-700 hover:text-brand-gold py-2">Contact</a>
+        </nav>
       </div>
+      <div class="pt-6 border-t border-slate-100">
+        <a href="donate.html" class="w-full inline-flex items-center justify-center py-3 px-6 rounded-full text-base font-bold text-white bg-brand-gold shadow-lg">Donate Now</a>
+      </div>
+    </div>
+  </div>
 
-      <!-- STRATEGY INFO BOX -->
-      <div class="involve-strategy-box">
-        <p style="font-size: 14px; line-height: 1.7; color: #ffffff;">
-          Sinethemba Hope Organisation is currently equipped with the latest strategies, these involve community dialogues, awareness, workshops, peer education and many more. It is imperative for all stakeholders to get involved and participate in fighting all social ills in every possible way.
+  <main>
+    <!-- HERO HEADER -->
+    <section class="bg-gradient-to-b from-brand-navy to-brand-navy-dark text-white py-16 sm:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-slate-800 text-amber-400 border border-slate-700">
+          Partner With Purpose
+        </span>
+        <h1 class="font-heading font-extrabold text-3xl sm:text-5xl text-white tracking-tight">
+          Ways to Get Involved Today
+        </h1>
+        <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto">
+          Whether through sponsoring school supplies, corporate CSI grants, or sharing professional skills, you can transform a young life.
         </p>
       </div>
+    </section>
 
-      <!-- VOLUNTEER SECTION -->
-      <div class="involve-volunteer-card">
-        <img src="assets/images/icon-volunteer.png" alt="Volunteer Icon" class="volunteer-icon" />
-        <div>
-          <h3 style="font-family: 'Impact', 'Charcoal', sans-serif; font-size: 24px; color: var(--primary-gold); margin-bottom: 8px;">
-            VOLUNTEER
-          </h3>
-          <p style="font-size: 14px; line-height: 1.7; color: #ffffff; margin-bottom: 8px;">
-            Sinethemba Hope Center believes in a community-centered, family-focused approach to supporting the needs of children and families. We are a non-profit organization in Pongola, that operates on funding from federal grants and the generosity of private groups and individuals. Join hands with us as we change our community.
-          </p>
-          <p style="font-size: 14px; font-style: italic; color: #dddddd;">
-            We still in need of new skills. Reach out to offer your expertise in education, healthcare, counseling, and youth sports.
-          </p>
-          <div style="margin-top: 12px;">
-            <a href="contact.html" class="btn-gold">VOLUNTEER WITH US</a>
+    <!-- 3 PILLARS SECTION -->
+    <section class="py-16 sm:py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-3 gap-8">
+          
+          <!-- Pillar 1 -->
+          <div class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200/80 shadow-md flex flex-col justify-between p-6 sm:p-8 space-y-6">
+            <div>
+              <img src="assets/images/sponsor-child.jpg" alt="Sponsor a Child" class="w-full h-48 rounded-2xl object-cover mb-6 shadow-sm" />
+              <h3 class="font-heading font-extrabold text-2xl text-brand-navy mb-2">Sponsor a Child</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Like many children in this world, learners in rural communities need your support to access full tailored school uniforms, study packs, and shoes so they can attend school with confidence.
+              </p>
+            </div>
+            <a href="donate.html" class="w-full inline-flex items-center justify-center py-3 px-6 rounded-full font-bold text-xs text-white bg-brand-gold hover:bg-brand-gold-hover shadow-sm">
+              Sponsor for R450 âž”
+            </a>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200/80 shadow-md flex flex-col justify-between p-6 sm:p-8 space-y-6">
+            <div>
+              <img src="assets/images/support-family.jpg" alt="Support a Family" class="w-full h-48 rounded-2xl object-cover mb-6 shadow-sm" />
+              <h3 class="font-heading font-extrabold text-2xl text-brand-navy mb-2">Support a Family</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Empower vulnerable households with emergency nutritional relief, healthcare assistance, and sustainable vegetable garden starter kits.
+              </p>
+            </div>
+            <a href="contact.html?type=family" class="w-full inline-flex items-center justify-center py-3 px-6 rounded-full font-bold text-xs text-white bg-brand-navy hover:bg-brand-navy-light shadow-sm">
+              Support Family Projects âž”
+            </a>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200/80 shadow-md flex flex-col justify-between p-6 sm:p-8 space-y-6">
+            <div>
+              <div class="h-48 rounded-2xl bg-brand-navy text-white flex flex-col items-center justify-center p-6 text-center mb-6">
+                <span class="text-3xl mb-2">ðŸ¢</span>
+                <span class="font-heading font-bold text-lg text-amber-400">Corporate CSI &amp; SED</span>
+                <span class="text-xs text-slate-300 mt-1">Section 18A Tax Certificates</span>
+              </div>
+              <h3 class="font-heading font-extrabold text-2xl text-brand-navy mb-2">Corporate Support</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Direct your company's Corporate Social Investment (CSI) toward measurable educational outcomes with full tax-deductible receipts and B-BBEE SED recognition.
+              </p>
+            </div>
+            <a href="contact.html?type=corporate" class="w-full inline-flex items-center justify-center py-3 px-6 rounded-full font-bold text-xs text-brand-navy bg-amber-100 hover:bg-amber-200 shadow-sm border border-amber-300">
+              Inquire for CSI Partnership âž”
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- VOLUNTEER SECTION -->
+    <section class="py-16 bg-slate-50 border-t border-slate-200/80">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6">
+        <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-lg border border-slate-200/80 grid md:grid-cols-12 gap-8 items-center">
+          <div class="md:col-span-4 text-center">
+            <img src="assets/images/icon-volunteer.png" alt="Volunteer" class="w-32 h-32 mx-auto object-contain" />
+          </div>
+          <div class="md:col-span-8 space-y-4">
+            <h3 class="font-heading font-extrabold text-2xl text-brand-navy">
+              Volunteer Your Time &amp; Expertise
+            </h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              We welcome volunteer educators, sports coaches, healthcare professionals, and youth mentors. Sinethemba Hope Center believes in a community-centered approach to uplifting children and families.
+            </p>
+            <a href="contact.html?type=volunteer" class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs font-bold text-white bg-brand-gold hover:bg-brand-gold-hover shadow-md">
+              Apply to Volunteer âž”
+            </a>
           </div>
         </div>
       </div>
-
-    </div>
+    </section>
   </main>
 
-  <!-- SITE FOOTER -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-col">
-          <h5>About The Organization</h5>
-          <p>
-            <a href="https://www.facebook.com/sibusiso.dlaamini" target="_blank" rel="noopener noreferrer">
-              This website was developed by HUBIES PROJECT<br />
-              Direct contact / CONTACT: 078 777 0126 / EMAIL: zdkadlamini@gmail.com
-            </a>
-          </p>
-        </div>
-        <div class="footer-col">
-          <h5>Find Us</h5>
-          <p>Connect with Sinethemba Hope Organization on social media:</p>
-          <div class="social-links">
-            <a href="https://www.facebook.com/pages/Sinethemba-Hope-Organization/1465730450347994" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook Page">
-              f
-            </a>
-          </div>
-        </div>
-        <div class="footer-col">
-          <h5>Call Us</h5>
-          <p><strong>Sinethemba Hope Organization</strong></p>
-          <p>Tel: <a href="tel:+27343165972">+27 34 316 5972</a></p>
-          <p>Fax: +27 86 218 1989</p>
-          <p>Email: <a href="mailto:info@sinethembahope.org">info@sinethembahope.org</a></p>
-          <div style="margin-top: 10px;">
-            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=V6JWCTBSDK9JU" target="_blank" rel="noopener noreferrer" class="paypal-footer-badge">
-              <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" alt="Donate with PayPal" />
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <div>
-          &copy; 2015 - Present by <a href="http://www.cfci.org.za" target="_blank" rel="noopener noreferrer">CFCI</a> (Covenant Fellowship Church International). All rights reserved.
-        </div>
-        <div>
-          <a href="index.html">Home</a> | 
-          <a href="about_us.html">About Us</a> | 
-          <a href="get_involved.html">Get Involved</a> | 
-          <a href="donate.html">Donate</a> | 
-          <a href="contact.html">Contact</a>
-        </div>
-      </div>
+  <!-- FOOTER -->
+  <footer class="bg-brand-navy-dark text-slate-400 text-xs py-14 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      &copy; 2015 &ndash; 2026 Sinethemba Hope Organisation &bull; Registered Non-Profit &bull; Affiliated with CFCI.
     </div>
   </footer>
 

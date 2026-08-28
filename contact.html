@@ -1,180 +1,208 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CONTACT | Sinethemba Hope Organization</title>
-  <meta name="description" content="Contact Sinethemba Hope Organization in Pongola. Address, telephone, fax, email and inquiry form." />
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="stylesheet" href="assets/css/responsive.css" />
+  <title>Contact Us | Sinethemba Hope Organisation</title>
+  <meta name="description" content="Contact Sinethemba Hope Organisation in Pongola, KwaZulu-Natal. Address, phone numbers, and online contact form." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#0A2540',
+              'navy-dark': '#061727',
+              'navy-light': '#0F3459',
+              gold: '#F59E0B',
+              'gold-hover': '#D97706',
+              sky: '#E0F2FE',
+              'sky-dark': '#0284C7',
+              emerald: '#059669'
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body>
-  <div class="bg-overlay"></div>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased pb-20 md:pb-0">
 
-  <!-- SITE HEADER -->
-  <header class="site-header">
-    <div class="container">
-      <div class="header-top">
-        <a href="index.html" class="header-brand" aria-label="Sinethemba Hope Organization Home">
-          <img src="assets/images/logo.jpg" alt="Sinethemba Hope Organization Logo" class="header-logo" />
-          <div class="header-titles">
-            <h1>SINETHEMBA HOPE ORGANIZATION</h1>
-            <p class="header-tagline">Instiling positive attitude, hope and determination</p>
+  <!-- TOP NAVIGATION -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-3.5 group">
+          <img src="assets/images/logo.jpg" alt="Logo" class="h-12 w-12 rounded-xl object-cover shadow-sm group-hover:scale-105 transition-transform" />
+          <div class="flex flex-col">
+            <span class="font-heading font-extrabold text-lg sm:text-xl text-brand-navy tracking-tight leading-none group-hover:text-brand-gold transition-colors">
+              SINETHEMBA HOPE
+            </span>
+            <span class="text-xs text-slate-500 font-medium tracking-wide uppercase mt-1">Organisation &bull; NPO</span>
           </div>
         </a>
-        <div>
-          <a href="http://www.cfci.org.za/" target="_blank" rel="noopener noreferrer" class="header-action-btn">
-            KNOW MORE ABOUT CFCI
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="about_us.html" class="text-sm font-semibold text-slate-600 hover:text-brand-navy transition-colors">About Us</a>
+          <a href="index.html#programs" class="text-sm font-semibold text-slate-600 hover:text-brand-navy transition-colors">Our Programs</a>
+          <a href="index.html#impact" class="text-sm font-semibold text-slate-600 hover:text-brand-navy transition-colors">Impact</a>
+          <a href="index.html#governance" class="text-sm font-semibold text-slate-600 hover:text-brand-navy transition-colors">Section 18A / Governance</a>
+          <a href="contact.html" class="text-sm font-bold text-brand-gold">Contact</a>
+        </nav>
+        <div class="hidden sm:flex items-center gap-4">
+          <a href="donate.html" class="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full text-sm font-bold text-white bg-brand-gold hover:bg-brand-gold-hover shadow-md">
+            Donate Now
           </a>
         </div>
+        <button id="mobileMenuBtn" type="button" class="md:hidden p-2.5 rounded-xl text-slate-600 hover:text-brand-navy" aria-label="Menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+        </button>
       </div>
     </div>
-    <nav class="main-nav">
-      <div class="container nav-container">
-        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-          â˜° MENU
-        </button>
-        <ul class="nav-menu">
-          <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
-          <li class="nav-item"><a href="about_us.html" class="nav-link">ABOUT US</a></li>
-          <li class="nav-item"><a href="get_involved.html" class="nav-link">GET INVOLVED</a></li>
-          <li class="nav-item"><a href="donate.html" class="nav-link">DONATE</a></li>
-          <li class="nav-item active"><a href="contact.html" class="nav-link">CONTACT</a></li>
-        </ul>
-      </div>
-    </nav>
   </header>
 
-  <!-- MAIN CONTENT -->
-  <main class="main-wrapper">
-    <div class="container">
+  <!-- Mobile Drawer -->
+  <div id="mobileMenuDrawer" class="fixed inset-0 z-50 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex justify-end">
+    <div class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm" id="closeMobileMenuBtn"></div>
+    <div class="relative w-4/5 max-w-sm bg-white h-full shadow-2xl p-6 flex flex-col justify-between z-10">
+      <div>
+        <div class="flex items-center justify-between pb-6 border-b border-slate-100">
+          <span class="font-heading font-bold text-brand-navy">Sinethemba Hope</span>
+          <button type="button" class="p-2 text-slate-400" onclick="document.getElementById('mobileMenuDrawer').classList.add('translate-x-full')">âœ•</button>
+        </div>
+        <nav class="mt-6 flex flex-col gap-4">
+          <a href="about_us.html" class="mobile-nav-link text-base font-semibold text-slate-700 py-2">About Us</a>
+          <a href="get_involved.html" class="mobile-nav-link text-base font-semibold text-slate-700 py-2">Get Involved</a>
+          <a href="donate.html" class="mobile-nav-link text-base font-semibold text-slate-700 py-2">Donate</a>
+          <a href="contact.html" class="mobile-nav-link text-base font-bold text-brand-gold py-2">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </div>
 
-      <!-- HERO BANNER IMAGE -->
-      <div class="page-hero-banner">
-        <img src="assets/images/contact-banner.jpg" alt="Contact Us - Sinethemba Hope Organization" />
+  <main class="py-16 sm:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center space-y-3 mb-14">
+        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-amber-100 text-amber-800 uppercase tracking-wider">
+          Contact &bull; Location &bull; Inquiries
+        </span>
+        <h1 class="font-heading font-extrabold text-3xl sm:text-5xl text-brand-navy tracking-tight">
+          Connect With Sinethemba Hope
+        </h1>
+        <p class="text-slate-600 text-sm sm:text-base max-w-xl mx-auto">
+          We welcome inquiries from community members, volunteers, donors, and corporate grantmakers.
+        </p>
       </div>
 
-      <!-- PAGE TITLE BANNER -->
-      <div class="banner-ribbon-gold">
-        <h2>CONTACT US</h2>
-      </div>
+      <div class="grid lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Left: Official Details -->
+        <div class="lg:col-span-5 bg-white p-8 rounded-3xl border border-slate-200/80 shadow-md space-y-6">
+          <h2 class="font-heading font-bold text-xl text-brand-navy border-b border-slate-100 pb-3">
+            Head Office Details
+          </h2>
 
-      <!-- CONTACT GRID -->
-      <div class="contact-grid">
-        <!-- Left: Contact Details -->
-        <div class="contact-info-card">
-          <div class="contact-info-block">
-            <h3 class="contact-block-heading">Call us:</h3>
-            <p>Tell: <a href="tel:+27343165972">+27 34 316 5972</a></p>
-            <p>Fax: +27 86 218 1989</p>
-            <p>Email: <a href="mailto:info@sinethembahope.org">info@sinethembahope.org</a></p>
-          </div>
-
-          <div class="contact-info-block">
-            <h3 class="contact-block-heading">Find us:</h3>
-            <p><strong>Pongola Ncotshane:</strong></p>
-            <p>Main Street</p>
-            <p>P.O.Box 1278</p>
-            <p>Pongola 3170</p>
-          </div>
-
-          <div class="contact-info-block" style="margin-bottom: 0;">
-            <h3 class="contact-block-heading">Social Media:</h3>
-            <div class="social-links">
-              <a href="https://www.facebook.com/pages/Sinethemba-Hope-Organization/1465730450347994" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook Page">
-                f
-              </a>
+          <div class="space-y-4 text-sm text-slate-700">
+            <div>
+              <strong class="block text-brand-navy">Physical Address:</strong>
+              Pongola Ncotshane, Main Street, Pongola 3170, KwaZulu-Natal, South Africa
             </div>
+
+            <div>
+              <strong class="block text-brand-navy">Postal Address:</strong>
+              P.O. Box 1278, Pongola 3170
+            </div>
+
+            <div>
+              <strong class="block text-brand-navy">Telephone:</strong>
+              <a href="tel:+27343165972" class="text-brand-gold font-bold hover:underline">+27 34 316 5972</a>
+            </div>
+
+            <div>
+              <strong class="block text-brand-navy">Fax:</strong>
+              +27 86 218 1989
+            </div>
+
+            <div>
+              <strong class="block text-brand-navy">Email:</strong>
+              <a href="mailto:info@sinethembahope.org" class="text-brand-gold font-bold hover:underline">info@sinethembahope.org</a>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-slate-100">
+            <span class="text-xs font-bold text-slate-500 block mb-2 uppercase tracking-wider">Social Links</span>
+            <a href="https://www.facebook.com/pages/Sinethemba-Hope-Organization/1465730450347994" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-xs font-bold text-slate-700">
+              Facebook Page â†—
+            </a>
           </div>
         </div>
 
-        <!-- Right: Contact Form -->
-        <div class="form-card">
-          <h3 class="form-card-title">Send Us a Message</h3>
-          <form id="contactForm">
-            <div class="form-group">
-              <label for="contactName">Name *</label>
-              <input type="text" id="contactName" class="form-control" placeholder="Name *" required />
+        <!-- Right: Inquiry Form -->
+        <div class="lg:col-span-7 bg-white p-8 sm:p-10 rounded-3xl border border-slate-200/80 shadow-md">
+          <h2 class="font-heading font-bold text-xl text-brand-navy mb-6">Send an Online Inquiry</h2>
+          
+          <form id="contactForm" class="space-y-4">
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label for="fullName" class="block text-xs font-semibold text-slate-600 mb-1">Full Name *</label>
+                <input type="text" id="fullName" required placeholder="John Doe" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20" />
+              </div>
+              <div>
+                <label for="emailAddr" class="block text-xs font-semibold text-slate-600 mb-1">Email Address *</label>
+                <input type="email" id="emailAddr" required placeholder="john@example.com" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20" />
+              </div>
             </div>
-            <div class="form-group">
-              <label for="contactEmail">Email *</label>
-              <input type="email" id="contactEmail" class="form-control" placeholder="Email *" required />
+
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label for="phoneNum" class="block text-xs font-semibold text-slate-600 mb-1">Phone Number</label>
+                <input type="tel" id="phoneNum" placeholder="+27 ..." class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20" />
+              </div>
+              <div>
+                <label for="inquiryType" class="block text-xs font-semibold text-slate-600 mb-1">Inquiry Type</label>
+                <select id="inquiryType" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20 bg-white">
+                  <option value="general">General Support &amp; Information</option>
+                  <option value="corporate">Corporate Social Investment (CSI)</option>
+                  <option value="volunteer">Volunteer &amp; Skills Sharing</option>
+                  <option value="section18a">Section 18A Tax Certificate Request</option>
+                </select>
+              </div>
             </div>
-            <div class="form-group">
-              <label for="contactPhone">Phone</label>
-              <input type="tel" id="contactPhone" class="form-control" placeholder="Phone" />
+
+            <div>
+              <label for="messageText" class="block text-xs font-semibold text-slate-600 mb-1">Message *</label>
+              <textarea id="messageText" required rows="4" placeholder="How can we help you?" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20"></textarea>
             </div>
-            <div class="form-group">
-              <label for="contactAddress">Address</label>
-              <input type="text" id="contactAddress" class="form-control" placeholder="Address" />
-            </div>
-            <div class="form-group">
-              <label for="contactSubject">Subject</label>
-              <input type="text" id="contactSubject" class="form-control" placeholder="Subject" />
-            </div>
-            <div class="form-group">
-              <label for="contactMessage">Message</label>
-              <textarea id="contactMessage" class="form-control" placeholder="Message"></textarea>
-            </div>
-            <button type="submit" class="btn-gold-large" style="width: 100%;" data-original-text="Send">Send</button>
-            <div id="contactSuccessMsg" class="form-alert-success">
-              Your details were sent successfully!
+
+            <button type="submit" class="w-full py-3.5 px-6 rounded-xl font-bold text-sm text-white bg-brand-navy hover:bg-brand-navy-light shadow-md transition-all">
+              Submit Message
+            </button>
+
+            <div id="contactSuccessAlert" class="hidden p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-semibold text-center">
+              âœ“ Thank you! Your message has been received. Our team will contact you shortly.
             </div>
           </form>
         </div>
+
       </div>
 
     </div>
   </main>
 
-  <!-- SITE FOOTER -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-col">
-          <h5>About The Organization</h5>
-          <p>
-            <a href="https://www.facebook.com/sibusiso.dlaamini" target="_blank" rel="noopener noreferrer">
-              This website was developed by HUBIES PROJECT<br />
-              Direct contact / CONTACT: 078 777 0126 / EMAIL: zdkadlamini@gmail.com
-            </a>
-          </p>
-        </div>
-        <div class="footer-col">
-          <h5>Find Us</h5>
-          <p>Connect with Sinethemba Hope Organization on social media:</p>
-          <div class="social-links">
-            <a href="https://www.facebook.com/pages/Sinethemba-Hope-Organization/1465730450347994" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook Page">
-              f
-            </a>
-          </div>
-        </div>
-        <div class="footer-col">
-          <h5>Call Us</h5>
-          <p><strong>Sinethemba Hope Organization</strong></p>
-          <p>Tel: <a href="tel:+27343165972">+27 34 316 5972</a></p>
-          <p>Fax: +27 86 218 1989</p>
-          <p>Email: <a href="mailto:info@sinethembahope.org">info@sinethembahope.org</a></p>
-          <div style="margin-top: 10px;">
-            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=V6JWCTBSDK9JU" target="_blank" rel="noopener noreferrer" class="paypal-footer-badge">
-              <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" alt="Donate with PayPal" />
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <div>
-          &copy; 2015 - Present by <a href="http://www.cfci.org.za" target="_blank" rel="noopener noreferrer">CFCI</a> (Covenant Fellowship Church International). All rights reserved.
-        </div>
-        <div>
-          <a href="index.html">Home</a> | 
-          <a href="about_us.html">About Us</a> | 
-          <a href="get_involved.html">Get Involved</a> | 
-          <a href="donate.html">Donate</a> | 
-          <a href="contact.html">Contact</a>
-        </div>
-      </div>
-    </div>
+  <!-- FOOTER -->
+  <footer class="bg-brand-navy-dark text-slate-400 text-xs py-10 border-t border-slate-800 text-center">
+    &copy; 2015 &ndash; 2026 Sinethemba Hope Organisation &bull; Registered Non-Profit &bull; CFCI Affiliated.
   </footer>
 
   <script src="assets/js/main.js"></script>
