@@ -29,10 +29,12 @@ sinethembahopeorg/
 ```
 
 ## Official Banking Details (EFT Only)
-* **Account Holder**: Sinethemba Hope organization
+* **Account Name / Holder**: SINETHEMBA/ HOPE ORGANISATION NPO
 * **Bank**: First National Bank (FNB)
-* **Account Number**: `62233690404`
-* **Branch Code**: `250655`
+* **Account Number**: `63081414682`
+* **Account Type**: Gold Business Account
+* **Branch Code**: `270124`
+* **SWIFT Code (International Transfers)**: `FIRNZAJJ`
 * **Tax Deductibility**: Section 18A SARS PBO Approved
 
 ## Credits

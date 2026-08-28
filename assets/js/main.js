@@ -132,13 +132,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   copyEftBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      const bankDetails = "Account Holder: Sinethemba Hope organization\nBank: First National Bank (FNB)\nAccount Number: 62233690404\nBranch Code: 250655\nReference: Your Name / Cell Number";
+      const bankDetails = "Account Name: SINETHEMBA/ HOPE ORGANISATION NPO\nBank: First National Bank (FNB)\nAccount Number: 63081414682\nAccount Type: Gold Business Account\nBranch Code: 270124\nSWIFT Code: FIRNZAJJ\nReference: Your Name / Cell Number";
       navigator.clipboard.writeText(bankDetails).then(() => {
         if (copyFeedback) {
           copyFeedback.classList.remove('opacity-0');
           setTimeout(() => copyFeedback.classList.add('opacity-0'), 3000);
         }
-        btn.textContent = "âœ“ Details Copied!";
+        btn.textContent = "✓ Details Copied!";
         setTimeout(() => {
           btn.innerHTML = `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg> Copy Banking Details`;
         }, 3000);
