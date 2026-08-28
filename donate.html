@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DONATE | Sinethemba Hope Organization</title>
+  <meta name="description" content="Support Sinethemba Hope Organization with donations via bank transfer, cheque, or PayPal." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+<body>
+  <div class="bg-overlay"></div>
+
+  <!-- SITE HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-top">
+        <a href="index.html" class="header-brand" aria-label="Sinethemba Hope Organization Home">
+          <img src="assets/images/logo.jpg" alt="Sinethemba Hope Organization Logo" class="header-logo" />
+          <div class="header-titles">
+            <h1>SINETHEMBA HOPE ORGANIZATION</h1>
+            <p class="header-tagline">Instiling positive attitude, hope and determination</p>
+          </div>
+        </a>
+        <div>
+          <a href="http://www.cfci.org.za/" target="_blank" rel="noopener noreferrer" class="header-action-btn">
+            KNOW MORE ABOUT CFCI
+          </a>
+        </div>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <div class="container nav-container">
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          â˜° MENU
+        </button>
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+          <li class="nav-item"><a href="about_us.html" class="nav-link">ABOUT US</a></li>
+          <li class="nav-item"><a href="get_involved.html" class="nav-link">GET INVOLVED</a></li>
+          <li class="nav-item active"><a href="donate.html" class="nav-link">DONATE</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-wrapper">
+    <div class="container">
+
+      <!-- HERO BANNER IMAGE -->
+      <div class="page-hero-banner">
+        <img src="assets/images/donate-banner.jpg" alt="Support Us - Sinethemba Hope Organization" />
+      </div>
+
+      <!-- PAGE TITLE BANNER -->
+      <div class="banner-ribbon-gold">
+        <h2>SUPPORT US</h2>
+      </div>
+
+      <!-- DONATION DETAILS & BANKING -->
+      <div class="donate-top-section">
+        <h3 class="donate-heading">Support Us | Make a Donation</h3>
+        <p class="donate-subtext">
+          You can make a broad, life-changing impact on the lives of those who turn to us for help.
+        </p>
+
+        <div class="payment-details-box">
+          <h3>Payment Details</h3>
+          <p><strong>Cheque:</strong> Post to Address: P O Box 1278 &nbsp; Pongola 3170</p>
+          <div style="margin-top: 10px;">
+            <p><strong>Bank Transfer:</strong></p>
+            <p>Account holder: <strong>Sinethemba Hope organization</strong></p>
+            <p>Bank name: <strong>First National Bank</strong></p>
+            <p>Account No: <strong>62233690404</strong></p>
+            <p>Branch Code: <strong>250655</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PAYPAL DONATION CTA -->
+      <div class="paypal-donate-cta">
+        <h4>WE WELCOME YOUR DONATION</h4>
+        <div style="margin: 15px 0;">
+          <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=V6JWCTBSDK9JU" target="_blank" rel="noopener noreferrer" class="btn-gold-large">
+            DONATE WITH PAYPAL
+          </a>
+        </div>
+        <div style="margin-top: 10px;">
+          <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" alt="PayPal Accepted Cards" style="margin: 0 auto;" />
+        </div>
+      </div>
+
+      <!-- FORMS GRID -->
+      <div class="donate-forms-grid">
+        <!-- Direct Donation Pledge Form -->
+        <div class="form-card">
+          <h4 class="form-card-title">Direct Donation Pledge</h4>
+          <form id="directDonationForm">
+            <div class="form-group">
+              <label for="pledgeName">Name *</label>
+              <input type="text" id="pledgeName" class="form-control" placeholder="Name *" required />
+            </div>
+            <div class="form-group">
+              <label for="pledgeEmail">Email *</label>
+              <input type="email" id="pledgeEmail" class="form-control" placeholder="Email *" required />
+            </div>
+            <div class="form-group">
+              <label for="pledgePhone">Phone</label>
+              <input type="tel" id="pledgePhone" class="form-control" placeholder="Phone" />
+            </div>
+            <div class="form-group">
+              <label for="pledgeAddress">Address</label>
+              <input type="text" id="pledgeAddress" class="form-control" placeholder="Address" />
+            </div>
+            <div class="form-group">
+              <label for="pledgeSubject">Subject</label>
+              <input type="text" id="pledgeSubject" class="form-control" placeholder="Subject" />
+            </div>
+            <div class="form-group">
+              <label for="pledgeMessage">Message</label>
+              <textarea id="pledgeMessage" class="form-control" placeholder="Message"></textarea>
+            </div>
+            <button type="submit" class="btn-gold-large" style="width: 100%;" data-original-text="Send">Send</button>
+            <div id="directDonationSuccessMsg" class="form-alert-success">
+              Your details were sent successfully!
+            </div>
+          </form>
+        </div>
+
+        <!-- Newsletter Subscription Form -->
+        <div class="form-card">
+          <h4 class="form-card-title">Subscribe for Updates</h4>
+          <p style="font-size: 13px; color: #ccc; margin-bottom: 15px;">
+            Stay updated with our community projects, reports, and outreach initiatives.
+          </p>
+          <form id="newsletterForm">
+            <div class="form-group">
+              <label for="subName">Name *</label>
+              <input type="text" id="subName" class="form-control" placeholder="Name" required />
+            </div>
+            <div class="form-group">
+              <label for="subLastName">Last Name *</label>
+              <input type="text" id="subLastName" class="form-control" placeholder="Last Name" required />
+            </div>
+            <div class="form-group">
+              <label for="subPhone">Mobile Number</label>
+              <input type="tel" id="subPhone" class="form-control" placeholder="Mobile Number" />
+            </div>
+            <div class="form-group">
+              <label for="subEmail">Email *</label>
+              <input type="email" id="subEmail" class="form-control" placeholder="Email" required />
+            </div>
+            <button type="submit" class="btn-gold-large" style="width: 100%;" data-original-text="Subscribe Now">Subscribe Now</button>
+            <div id="newsletterSuccessMsg" class="form-alert-success">
+              Congrats! Youâ€™re subscribed
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col">
+          <h5>About The Organization</h5>
+          <p>
+            <a href="https://www.facebook.com/sibusiso.dlaamini" target="_blank" rel="noopener noreferrer">
+              This website was developed by HUBIES PROJECT<br />
+              Direct contact / CONTACT: 078 777 0126 / EMAIL: zdkadlamini@gmail.com
+            </a>
+          </p>
+        </div>
+        <div class="footer-col">
+          <h5>Find Us</h5>
+          <p>Connect with Sinethemba Hope Organization on social media:</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/pages/Sinethemba-Hope-Organization/1465730450347994" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook Page">
+              f
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Call Us</h5>
+          <p><strong>Sinethemba Hope Organization</strong></p>
+          <p>Tel: <a href="tel:+27343165972">+27 34 316 5972</a></p>
+          <p>Fax: +27 86 218 1989</p>
+          <p>Email: <a href="mailto:info@sinethembahope.org">info@sinethembahope.org</a></p>
+          <div style="margin-top: 10px;">
+            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=V6JWCTBSDK9JU" target="_blank" rel="noopener noreferrer" class="paypal-footer-badge">
+              <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" alt="Donate with PayPal" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>
+          &copy; 2015 - Present by <a href="http://www.cfci.org.za" target="_blank" rel="noopener noreferrer">CFCI</a> (Covenant Fellowship Church International). All rights reserved.
+        </div>
+        <div>
+          <a href="index.html">Home</a> | 
+          <a href="about_us.html">About Us</a> | 
+          <a href="get_involved.html">Get Involved</a> | 
+          <a href="donate.html">Donate</a> | 
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
