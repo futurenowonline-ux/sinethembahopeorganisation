@@ -245,21 +245,21 @@
       </div>
     </section>
 
-    <!-- =========================================================================
-         D. INTERACTIVE TANGIBLE GIVING DONATION SECTION
+        <!-- =========================================================================
+         D. TANGIBLE GIVING & EFT BANKING SECTION
          ========================================================================= -->
     <section id="donate" class="py-16 sm:py-24 bg-slate-50">
       <div class="max-w-4xl mx-auto px-4 sm:px-6">
         
         <div class="text-center space-y-3 mb-10">
           <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-amber-100 text-amber-800 uppercase tracking-wider">
-            Make A Direct Difference
+            Direct Bank Transfer (EFT)
           </span>
           <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-brand-navy tracking-tight">
-            Transparent, Impact-Driven Giving
+            Support Our Mission via Bank Transfer (EFT)
           </h2>
           <p class="text-slate-600 text-sm sm:text-base max-w-xl mx-auto">
-            Choose a verified giving option below. 80% of every Rand directly funds school uniforms, stationery, and youth development in underprivileged communities.
+            Choose a suggested impact amount below, then transfer directly to our official First National Bank (FNB) non-profit account. 80% of every Rand directly funds school uniforms and youth programs.
           </p>
         </div>
 
@@ -269,10 +269,10 @@
           <div class="flex justify-center mb-8">
             <div class="inline-flex p-1.5 bg-slate-100 rounded-full border border-slate-200">
               <button type="button" id="freqOnceBtn" class="px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-white text-brand-navy shadow-sm transition-all touch-target">
-                Give Once
+                One-Time Transfer
               </button>
               <button type="button" id="freqMonthlyBtn" class="px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold text-slate-600 hover:text-brand-navy transition-all touch-target">
-                Give Monthly (Sustained Impact)
+                Monthly Recurring EFT
               </button>
             </div>
           </div>
@@ -329,7 +329,7 @@
           <!-- Summary Box -->
           <div class="p-4 rounded-xl bg-slate-50 border border-slate-200/80 mb-8 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div class="text-center sm:text-left">
-              <div class="text-xs font-medium text-slate-500 uppercase tracking-wide">Selected Donation</div>
+              <div class="text-xs font-medium text-slate-500 uppercase tracking-wide">Selected Contribution</div>
               <div class="text-lg font-bold text-brand-navy">
                 <span id="donationSummaryAmount">R450</span>
                 <span id="donationSummaryFreq" class="text-sm text-slate-500 font-normal"> (One-Time)</span>
@@ -346,13 +346,55 @@
             </div>
           </div>
 
-          <!-- Proceed Button -->
-          <a id="proceedDonationBtn" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=V6JWCTBSDK9JU" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-3 py-4 px-8 rounded-full text-base sm:text-lg font-extrabold text-white bg-gradient-to-r from-brand-gold to-amber-600 hover:from-amber-500 hover:to-amber-700 shadow-xl hover:shadow-amber-500/25 transition-all transform hover:-translate-y-0.5 touch-target">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
-            </svg>
-            Proceed to Secure Donation
-          </a>
+          <!-- Official FNB Bank Details Card -->
+          <div class="p-6 sm:p-8 rounded-2xl bg-brand-navy text-white shadow-lg space-y-4">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-700">
+              <div class="flex items-center gap-2">
+                <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"></path></svg>
+                <h3 class="font-heading font-bold text-lg text-white">Official FNB Banking Details (EFT)</h3>
+              </div>
+              <button id="copyEftBtn" type="button" class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl text-xs font-bold text-brand-navy bg-brand-gold hover:bg-brand-gold-hover transition-colors touch-target">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                Copy Banking Details
+              </button>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-4 text-sm text-slate-300">
+              <div class="bg-slate-800/80 p-3.5 rounded-xl border border-slate-700/60">
+                <span class="text-xs text-slate-400 uppercase tracking-wider block font-semibold mb-1">Account Holder</span>
+                <strong class="text-white text-base">Sinethemba Hope organization</strong>
+              </div>
+              <div class="bg-slate-800/80 p-3.5 rounded-xl border border-slate-700/60">
+                <span class="text-xs text-slate-400 uppercase tracking-wider block font-semibold mb-1">Bank Name</span>
+                <strong class="text-white text-base">First National Bank (FNB)</strong>
+              </div>
+              <div class="bg-slate-800/80 p-3.5 rounded-xl border border-slate-700/60">
+                <span class="text-xs text-slate-400 uppercase tracking-wider block font-semibold mb-1">Account Number</span>
+                <strong class="text-amber-400 text-lg font-mono tracking-wider">62233690404</strong>
+              </div>
+              <div class="bg-slate-800/80 p-3.5 rounded-xl border border-slate-700/60">
+                <span class="text-xs text-slate-400 uppercase tracking-wider block font-semibold mb-1">Branch Code</span>
+                <strong class="text-white text-base font-mono">250655</strong>
+              </div>
+            </div>
+
+            <div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400">
+              <p class="text-amber-200">
+                &bull; <strong>Payment Reference:</strong> Please use your <em>Name</em> or <em>Cell Number</em> as the reference.
+              </p>
+              <p id="copyFeedback" class="text-emerald-400 font-semibold opacity-0 transition-opacity">
+                &check; Banking details copied to clipboard!
+              </p>
+            </div>
+          </div>
+
+          <!-- Section 18A Certificate Callout -->
+          <div class="mt-6 p-4 rounded-xl bg-slate-50 border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+            <span class="text-slate-600">Need a verified SARS Section 18A tax deduction certificate for your EFT donation?</span>
+            <a href="donate.html#tax-receipt" class="font-bold text-brand-navy hover:text-brand-gold underline whitespace-nowrap">
+              Submit Proof &amp; Request Tax Certificate &rarr;
+            </a>
+          </div>
 
           <!-- Trust Badges -->
           <div class="mt-8 pt-6 border-t border-slate-100 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-500">
@@ -360,50 +402,18 @@
               <svg class="w-4 h-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 1.944A11.954 11.954 0 012.166 5C2.056 5.649 2 6.319 2 7c0 5.225 3.34 9.67 8 11.317C14.66 16.67 18 12.225 18 7c0-.682-.057-1.35-.166-2.001A11.954 11.954 0 0110 1.944zm3.707 6.763a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
-              SSL 256-Bit Encrypted
+              Direct Bank Transfer (EFT) Only
             </span>
             <span class="inline-flex items-center gap-1.5">
               <svg class="w-4 h-4 text-brand-navy" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"/>
                 <path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd"/>
               </svg>
-              Card &amp; Instant EFT
-            </span>
-            <span class="inline-flex items-center gap-1.5">
-              Official PayPal Partner
+              FNB Verified NPO Account
             </span>
             <span class="inline-flex items-center gap-1.5">
               SARS PBO Compliant
             </span>
-          </div>
-
-          <!-- Direct Bank EFT Accordion -->
-          <div class="mt-6">
-            <button type="button" id="eftToggleBtn" class="w-full py-3 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs sm:text-sm font-semibold flex items-center justify-between transition-colors touch-target">
-              <span class="flex items-center gap-2">
-                <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"></path></svg>
-                Need Direct Bank Deposit (EFT) Details? Click Here
-              </span>
-              <svg class="toggle-icon w-4 h-4 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-
-            <div id="eftDetailsBox" class="hidden mt-3 p-5 rounded-2xl bg-slate-900 text-white border border-slate-700 text-sm space-y-2.5">
-              <div class="flex items-center justify-between pb-2 border-b border-slate-800">
-                <span class="font-bold text-amber-400 uppercase tracking-wider text-xs">Official FNB Banking Details</span>
-                <button id="copyEftBtn" type="button" class="text-xs font-semibold px-3 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-600 transition-colors">
-                  Copy Details
-                </button>
-              </div>
-              <div class="grid sm:grid-cols-2 gap-2 text-xs sm:text-sm text-slate-300">
-                <div><strong class="text-white">Account Holder:</strong> Sinethemba Hope organization</div>
-                <div><strong class="text-white">Bank:</strong> First National Bank (FNB)</div>
-                <div><strong class="text-white">Account Number:</strong> 62233690404</div>
-                <div><strong class="text-white">Branch Code:</strong> 250655</div>
-              </div>
-              <p id="copyFeedback" class="text-xs text-emerald-400 font-semibold opacity-0 transition-opacity">&check; Banking details copied to clipboard!</p>
-            </div>
           </div>
 
         </div>

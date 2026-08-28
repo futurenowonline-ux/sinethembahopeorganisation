@@ -1,8 +1,8 @@
-﻿# Sinethemba Hope Organization Website
+# Sinethemba Hope Organisation Website
 
-A clean, modern, standalone static replica of the Sinethemba Hope Organization website (`sinethembahopeorg`), recreated without proprietary Wix dependencies and ready for zero-cost hosting on **GitHub Pages** (or Netlify, Vercel, Cloudflare Pages) with custom domain support.
+A modern, mobile-first, high-converting digital platform for **Sinethemba Hope Organisation**, dedicated to youth development, school uniform & stationery drives, youth sports development, and community upliftment in South Africa.
 
-## ðŸš€ Quick Local Preview
+## Quick Local Preview
 Simply open any HTML file (`index.html`, `about_us.html`, `get_involved.html`, `donate.html`, `contact.html`) in your browser or run a local web server:
 
 ```bash
@@ -13,53 +13,28 @@ python -m http.server 8000
 npx serve
 ```
 
-## ðŸ“¦ Project Structure
+## Project Structure
 ```
 sinethembahopeorg/
-â”œâ”€â”€ index.html            # Home page (with interactive Hero Slideshow & Project Cards)
-â”œâ”€â”€ about_us.html         # About Us page (History, Vision, Mission, HOPE Framework)
-â”œâ”€â”€ get_involved.html     # Get Involved page (Sponsor Child, Family, Corporate, Volunteer)
-â”œâ”€â”€ donate.html           # Donate page (Bank details, PayPal button, Direct pledge form)
-â”œâ”€â”€ contact.html          # Contact page (Addresses, phone, email, interactive contact form)
+â”œâ”€â”€ index.html            # Home page (Hero, Trust Bar, Tangible Giving EFT, Programs, Governance)
+â”œâ”€â”€ about_us.html         # About Us page (Founder Story, Vision, Mission, HOPE Framework)
+â”œâ”€â”€ get_involved.html     # Get Involved page (Sponsor Child, Family, Corporate CSI, Volunteer)
+â”œâ”€â”€ donate.html           # Donate page (Official FNB EFT Bank Details, Section 18A Tax Certificate Form)
+â”œâ”€â”€ contact.html          # Contact page (Pongola HQ, Phone, Email, Inquiry Form)
 â”œâ”€â”€ assets/
-â”‚   â”œâ”€â”€ css/
-â”‚   â”‚   â”œâ”€â”€ style.css     # Core styles (typography, layout, colors, cards)
-â”‚   â”‚   â””â”€â”€ responsive.css# Mobile, tablet, and desktop responsiveness
 â”‚   â”œâ”€â”€ js/
-â”‚   â”‚   â”œâ”€â”€ main.js       # Navigation menu, smooth scroll, form interactions
-â”‚   â”‚   â””â”€â”€ gallery.js    # Slideshow carousel & Lightbox modal
-â”‚   â””â”€â”€ images/           # All high-res bundled local images
+â”‚   â”‚   â””â”€â”€ main.js       # Mobile navigation drawer, giving amount calculator, 1-click EFT copy
+â”‚   â””â”€â”€ images/           # High-resolution local images
 â””â”€â”€ README.md
 ```
 
-## ðŸŒ How to Deploy to GitHub Pages & Custom Domain
+## Official Banking Details (EFT Only)
+* **Account Holder**: Sinethemba Hope organization
+* **Bank**: First National Bank (FNB)
+* **Account Number**: `62233690404`
+* **Branch Code**: `250655`
+* **Tax Deductibility**: Section 18A SARS PBO Approved
 
-### Step 1: Create a GitHub Repository
-1. Go to [GitHub.com/new](https://github.com/new) and create a repository (e.g. `sinethembahope-website` or `sinethembahopeorg`).
-
-### Step 2: Push the Files
-In this project folder, run:
-```bash
-git init
-git add .
-git commit -m "Initial release of Sinethemba Hope Organization static website"
-git branch -M main
-git remote add origin https://github.com/<YOUR-USERNAME>/<YOUR-REPO-NAME>.git
-git push -u origin main
-```
-
-### Step 3: Enable GitHub Pages
-1. On GitHub, go to your repository **Settings** -> **Pages**.
-2. Under **Build and deployment** -> **Branch**, select `main` and `/ (root)`, then click **Save**.
-3. Your website will be live in ~1-2 minutes at `https://<YOUR-USERNAME>.github.io/<YOUR-REPO-NAME>/`.
-
-### Step 4: Configure a Custom Domain (e.g., `sinethembahope.org`)
-1. In the same GitHub Pages settings under **Custom domain**, enter your domain name (e.g. `www.sinethembahope.org` or `sinethembahope.org`) and click **Save**.
-2. In your DNS provider (e.g., GoDaddy, Namecheap, Cloudflare, Afrihost):
-   - For apex domain (`sinethembahope.org`), add `A` records pointing to GitHub's IPs:
-     - `185.199.108.153`
-     - `185.199.109.153`
-     - `185.199.110.153`
-     - `185.199.111.153`
-   - For subdomain (`www.sinethembahope.org`), add a `CNAME` record pointing to `<YOUR-USERNAME>.github.io`.
-3. Check the box **Enforce HTTPS** in GitHub Pages settings.
+## Credits
+* **Organization**: Sinethemba Hope Organisation (Affiliated with CFCI)
+* **Optimized & Developed by**: [eNani Digital Tools](https://enanidigitaltools.org.za)

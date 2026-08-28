@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Sinethemba Hope Organisation - Modern Interaction & Giving Engine
  */
 
@@ -38,7 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const donationSummaryAmount = document.getElementById('donationSummaryAmount');
   const donationSummaryFreq = document.getElementById('donationSummaryFreq');
   const donationSummaryImpact = document.getElementById('donationSummaryImpact');
-  const proceedDonationBtn = document.getElementById('proceedDonationBtn');
 
   let selectedAmount = '450';
   let selectedFrequency = 'once'; // 'once' or 'monthly'
@@ -65,10 +64,6 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         donationSummaryImpact.textContent = impactMap[selectedAmount] || 'Vital community upliftment and youth education funding.';
       }
-    }
-
-    if (proceedDonationBtn) {
-      proceedDonationBtn.href = `https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=V6JWCTBSDK9JU&amount=${selectedAmount}`;
     }
   };
 
@@ -131,31 +126,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- 3. Direct EFT Accordion & Copy to Clipboard ---
-  const eftToggleBtn = document.getElementById('eftToggleBtn');
-  const eftDetailsBox = document.getElementById('eftDetailsBox');
-  const copyEftBtn = document.getElementById('copyEftBtn');
+  // --- 3. Direct EFT Copy to Clipboard ---
+  const copyEftBtns = document.querySelectorAll('#copyEftBtn');
   const copyFeedback = document.getElementById('copyFeedback');
 
-  if (eftToggleBtn && eftDetailsBox) {
-    eftToggleBtn.addEventListener('click', () => {
-      eftDetailsBox.classList.toggle('hidden');
-      const isExpanded = !eftDetailsBox.classList.contains('hidden');
-      eftToggleBtn.querySelector('.toggle-icon').style.transform = isExpanded ? 'rotate(180deg)' : 'rotate(0deg)';
-    });
-  }
-
-  if (copyEftBtn) {
-    copyEftBtn.addEventListener('click', () => {
-      const bankDetails = "Account Holder: Sinethemba Hope organization\nBank: First National Bank (FNB)\nAccount Number: 62233690404\nBranch Code: 250655";
+  copyEftBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const bankDetails = "Account Holder: Sinethemba Hope organization\nBank: First National Bank (FNB)\nAccount Number: 62233690404\nBranch Code: 250655\nReference: Your Name / Cell Number";
       navigator.clipboard.writeText(bankDetails).then(() => {
         if (copyFeedback) {
           copyFeedback.classList.remove('opacity-0');
-          setTimeout(() => copyFeedback.classList.add('opacity-0'), 2500);
+          setTimeout(() => copyFeedback.classList.add('opacity-0'), 3000);
         }
+        btn.textContent = "âœ“ Details Copied!";
+        setTimeout(() => {
+          btn.innerHTML = `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg> Copy Banking Details`;
+        }, 3000);
       });
     });
-  }
+  });
 
   // --- 4. Accessible Form Feedback Handlers ---
   const handleForm = (formId, alertId) => {
@@ -178,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.disabled = false;
             submitBtn.innerText = origText;
           }
-          setTimeout(() => alert.classList.add('hidden'), 5000);
+          setTimeout(() => alert.classList.add('hidden'), 6000);
         }, 500);
       });
     }
@@ -186,5 +175,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
   handleForm('contactForm', 'contactSuccessAlert');
   handleForm('section18AForm', 'taxReceiptSuccessAlert');
-  handleForm('newsletterForm', 'newsletterSuccessAlert');
 });
